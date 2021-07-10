@@ -1,0 +1,2 @@
+(this.webpackJsonpweatherapp=this.webpackJsonpweatherapp||[]).push([[7],{1067:function(e,t,a){"use strict";a.r(t);var n=a(1),r=a.n(n),c=a(989),s=a(123);t.default=function(){return r.a.createElement(c.a,{style:{height:"80vh"},container:!0,direction:"column",justify:"space-around",alignItems:"center"},r.a.createElement("div",{className:"form-section-music"},r.a.createElement(s.a,{variant:"h5",gutterBottom:!0},"The current page has been changed to the Helps in About page, sorry for this disconvenience")))}}}]);
+//# sourceMappingURL=7.f0f59cd4.chunk.js.map
