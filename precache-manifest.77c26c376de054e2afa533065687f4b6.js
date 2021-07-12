@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "040ba7a029c18d093083af3094f74d3a",
+    "revision": "f53ad26f94f7b7523607d73cb3f7e803",
     "url": "/ndsappbeta/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ndsappbeta/static/css/2.a4567992.chunk.css"
   },
   {
-    "revision": "f7b2ecb5336f4b32a6af",
-    "url": "/ndsappbeta/static/css/main.bfdb8bec.chunk.css"
+    "revision": "518c84d63e8b5b9210ae",
+    "url": "/ndsappbeta/static/css/main.c95a44af.chunk.css"
   },
   {
     "revision": "11f31d87013aed5a968d",
@@ -52,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ndsappbeta/static/js/9.df478f4d.chunk.js"
   },
   {
-    "revision": "f7b2ecb5336f4b32a6af",
+    "revision": "518c84d63e8b5b9210ae",
     "url": "/ndsappbeta/static/js/main.8690c97b.chunk.js"
   },
   {
