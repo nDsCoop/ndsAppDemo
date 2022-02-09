@@ -1,0 +1,2 @@
+(this.webpackJsonpweatherapp=this.webpackJsonpweatherapp||[]).push([[8],{992:function(e,t,a){"use strict";a.r(t);var n=a(1),r=a.n(n),c=a(915),i=a(121);t.default=function(){return r.a.createElement(c.a,{style:{height:"80vh"},container:!0,direction:"column",justify:"space-around",alignItems:"center"},r.a.createElement("div",{className:"form-section-music"},r.a.createElement(i.a,{variant:"h5",gutterBottom:!0},"The current page has been changed to the Feedback in About page, sorry for this disconvenience")))}}}]);
+//# sourceMappingURL=8.a596f3ef.chunk.js.map
