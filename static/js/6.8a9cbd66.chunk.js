@@ -1,0 +1,2 @@
+(this.webpackJsonpweatherapp=this.webpackJsonpweatherapp||[]).push([[6],{997:function(e,t,a){"use strict";a.r(t);var n=a(1),r=a.n(n),c=a(917),i=a(121);t.default=function(){return r.a.createElement(c.a,{style:{height:"80vh"},container:!0,direction:"column",justify:"space-around",alignItems:"center"},r.a.createElement("div",{className:"form-section-music"},r.a.createElement(i.a,{variant:"h5",gutterBottom:!0},"The current page has been changed to the Contributors in About page, sorry for this disconvenience")))}}}]);
+//# sourceMappingURL=6.8a9cbd66.chunk.js.map
