@@ -35,11 +35,15 @@ export default function Hero({children}) {
 					{/* <source src="https://static.videezy.com/system/resources/previews/000/022/198/original/underwater-effect-background.mp4" type="video/mp4"/> */}
 				</video>
 				<div className="overlay"></div>
+<<<<<<< HEAD
 				<div className="video-hero-content">
 					
 					{children}
 				
 				</div>
+=======
+				{children}
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 			</div>
 		)
 }

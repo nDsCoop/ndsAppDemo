@@ -12,7 +12,11 @@ class Maintenance extends Component {
 	 	return(
 			<>
             <Helmet>
+<<<<<<< HEAD
 				<title>Maintenance | nDsWeb</title>
+=======
+				<title>Maintenance | nDsBuilding</title>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 			</Helmet>
             <div className="main-maintenance">
                 <div className="header-maintenance">
@@ -41,10 +45,17 @@ class Maintenance extends Component {
                 <div className="body-maintanance">
                 
                 <div className="desc-maintenance">
+<<<<<<< HEAD
                     <h2>Oops! We are under maintenance</h2>
                     <h5>Our Group are currently performing scheduled maintenance on this App. Sorry for this inconvenience.</h5>
                     <p>And we can't wait for you to see it</p> 
                     <p>Feel free to get in touch and visit again soon</p>
+=======
+                    <h2>Opps! We are under maintenance</h2>
+                    <h5>Our Group are currently performing scheduled maintenance on this App. Sorry for any inconvenience.</h5>
+                    <p>And we can't wait for you to see it</p> 
+                    <p>Feel tree to get in touch and visit again soon</p>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 </div>
                 </div>
                 <div className="footer-maintenance">

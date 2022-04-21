@@ -22,7 +22,11 @@ export default class Page4 extends Component {
         const { store } = this.state;
         return (
             <Switch>
+<<<<<<< HEAD
                 <Route exact path="/ndsweb/retrille">
+=======
+                <Route exact path="/page4">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     <>
                     <App4 store = { store } />
                     <Helmet>
@@ -30,7 +34,11 @@ export default class Page4 extends Component {
                     </Helmet>
                     </>
                 </Route>
+<<<<<<< HEAD
                 <Route exact path="/ndsweb/retrille/:slug">
+=======
+                <Route exact path="/page4/:slug">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     <>
                     <App4 store = { store } />
                     <Helmet>

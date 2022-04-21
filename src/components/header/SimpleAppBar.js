@@ -78,7 +78,10 @@ function SimpleAppBar(props) {
     if (searchState === "home") {
       return (
         <>
+<<<<<<< HEAD
           {/* button open menu */}
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           <IconButton
             color="inherit"
             aria-label="Menu"
@@ -86,6 +89,7 @@ function SimpleAppBar(props) {
           >
             <Menu />
           </IconButton>
+<<<<<<< HEAD
 
           {/* title app */}
           <Typography variant="h6" color="inherit" style={styles.title}>
@@ -93,6 +97,11 @@ function SimpleAppBar(props) {
           </Typography>
 
           {/* button open search bar */}
+=======
+          <Typography variant="h6" color="inherit" style={styles.title}>
+            nDs Music
+          </Typography>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           <IconButton
             onClick={() => setSearchState("clicked")}
             color="inherit"
@@ -109,7 +118,10 @@ function SimpleAppBar(props) {
 
   return (
     <>
+<<<<<<< HEAD
       {/* render jxs Top navbar */}
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       <HideOnScroll {...props}>
         <AppBar id="navbar" position="sticky">
           <Toolbar>{toggleSearch()}</Toolbar>

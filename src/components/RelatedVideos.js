@@ -68,11 +68,17 @@ const RelatedVideos = ({
   const handleShuffleClick = () => {
 
     if(isLoadList){
+<<<<<<< HEAD
       console.log("set next ",songsDownloadedState);
       setRelatedVideos(shuffle(songsDownloadedState));
 
     }else{
       console.log("set next ", relatedVideos);
+=======
+      setRelatedVideos(shuffle(songsDownloadedState));
+
+    }else{
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       setRelatedVideos(shuffle(relatedVideos));
     }
     
@@ -83,7 +89,10 @@ const RelatedVideos = ({
     damping: 20,
     stiffness: 300
   };
+<<<<<<< HEAD
   
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   const handleClick = video => {
     // set all the info of current clicked video in this object
     setCurrentVideoSnippet({
@@ -95,7 +104,10 @@ const RelatedVideos = ({
       // this is the url of the max resolution of thumbnail
     });
     setPlaylist();
+<<<<<<< HEAD
     // window.location.pathname.replace(`/ndsappbeta/music/play?id=${video.videoId}`);
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   };
   const handleClick2 = video => {
     // set all the info of current clicked video in this object
@@ -108,13 +120,22 @@ const RelatedVideos = ({
       // this is the url of the max resolution of thumbnail
     });
     setPlaylist();
+<<<<<<< HEAD
     // window.location.pathname.replace(`/ndsappbeta/music/play?id=${video.videoId}`);
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   };
 
   try{
 
     if ((relatedVideos.length > 1) || (songsDownloadedState.length > 1)) {
+<<<<<<< HEAD
       
+=======
+      // console.log(relatedVideos)
+      // console.log(songsDownloadedState)
+     
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       if(isLoadList){
         renderResult2 = songsDownloadedState.map(song => {
           return (
@@ -136,8 +157,11 @@ const RelatedVideos = ({
         });
       }else{
         renderResult = relatedVideos.map(song => {
+<<<<<<< HEAD
           console.log("title ", song.snippet);
          
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           return (
             <motion.li key={song.id.videoId} positionTransition={spring}>
               <ListItem
@@ -151,7 +175,10 @@ const RelatedVideos = ({
                   primary={song.snippet.title.slice(0, 40)}
                   secondary={song.snippet.channelTitle.slice(0, 40)}
                 />
+<<<<<<< HEAD
               
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
               </ListItem>
             </motion.li>
           );
@@ -185,7 +212,11 @@ const RelatedVideos = ({
         justify="space-between"
       >
         
+<<<<<<< HEAD
         <Link to={"/music/home"}>
+=======
+        <Link to={"/page1/home"}>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         <RiHome2Line className="cssIcons" />
         </Link>
         {isLoadList ? (

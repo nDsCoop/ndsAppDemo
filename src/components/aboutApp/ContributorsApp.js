@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
 import { Typography, Container } from "@material-ui/core";
 import img from "../../images/svgnds.png";
 
@@ -12,11 +13,24 @@ export default class ContributorsApp extends Component {
             <div className="privacy-app">
               <Container>
               {/* header contribute app */}
+=======
+import { Typography, Divider, Container, Link } from "@material-ui/core";
+import img from "../../images/svgnds.png";
+
+export default class ContributorsApp extends Component {
+    render(){
+      
+        return (
+
+            <div className="privacy-app">
+                  <Container>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
               <header>
                 <Typography variant="h4" gutterBottom={true}>
                     Contributors{" "}
                 </Typography>
               </header>
+<<<<<<< HEAD
 
               <div className="deliver"></div>
               <br />
@@ -26,11 +40,22 @@ export default class ContributorsApp extends Component {
                 <Typography gutterBottom={true} variant="subtitle1">
                   {isEnglish ? 'nDsApp gets great contributions from the many individuals the development team has contacted with. A difficult solution, we always need that donation. Thanks again for the help building and developing nDsApp' 
                   : 'nDsApp được sự đóng góp lớn từ nhiều cá nhân tổ chức mà nhóm phát triển đã liên hệ.Một giải pháp khó, chúng tôi luôn cần sự đóng góp đó. Một lần nữa cảm ơn sự giúp đỡ cho việc xây dựng và phát triển nDsApp'}
+=======
+              <div className="deliver"></div>
+              <br />
+              <section>
+                <Typography gutterBottom={true} variant="subtitle1">
+                  nDsApp gets great contributions from the many individuals the development team has contacted with. A difficult solution, we always need that donation. Thanks again for the help building and developing nDsApp
+                  (nDsApp được sự đóng góp lớn từ nhiều cá nhân tổ chức mà nhóm phát triển đã liên hệ.Một giải pháp khó, chúng tôi luôn cần sự đóng góp đó. Một lần nữa cảm ơn sự giúp đỡ cho việc xây dựng và phát triển nDsApp)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <br />
                 </Typography>
                 <div className="list-contributes">
                   
+<<<<<<< HEAD
                   {/* Reactjs */}
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <div className="contribute">
                     <div className="contri-img">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" alt="logo Reactjs" ></img>
@@ -40,6 +65,7 @@ export default class ContributorsApp extends Component {
                         <h4><a href="https://reactjs.org/">ReactJs</a> | a library written in javascript</h4>
                       </div>
                       <div className="contri-text">
+<<<<<<< HEAD
                         <p>
                         {isEnglish ? 'ReactJs is the main platform the development team uses to build the frontend for the App. We received advice from a very important and influential person, then the team decided to use ReactJs as the primary medium for future App development. We appreciate the optimization of this platform and will continue to develop more' 
                         : 'ReactJs là nền tảng chính mà nhóm phát triển dùng để xây dựng phần frontend cho App. Chúng tôi nhận được lời khuyên từ một người rất quan trọng và có sức ảnh hưởng lớn, sau đó nhóm quyết định dùng ReactJs làm môi trường chính cho sự phát triển App về sau. Chúng tôi đánh giá cao sự tối ưu của nền tản này và sẽ tiếp tục phát triển nhiều hơn thế nữa'}
@@ -50,6 +76,13 @@ export default class ContributorsApp extends Component {
                   </div>
 
                   {/* Nodejs */}
+=======
+                        <p>ReactJs is the main platform the development team uses to build the frontend for the App. We received advice from a very important and influential person, then the team decided to use ReactJs as the primary medium for future App development. We appreciate the optimization of this platform and will continue to develop more</p>
+                        (ReactJs là nền tảng chính mà nhóm phát triển dùng để xây dựng phần frontend cho App. Chúng tôi nhận được lời khuyên từ một người rất quan trọng và có sức ảnh hưởng lớn, sau đó nhóm quyết định dùng ReactJs làm môi trường chính cho sự phát triển App về sau. Chúng tôi đánh giá cao sự tối ưu của nền tản này và sẽ tiếp tục phát triển nhiều hơn thế nữa)
+                      </div>
+                    </div>
+                  </div>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <div className="contribute">
                     <div className="contri-img">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png" alt="logo Nodejs"></img>
@@ -59,6 +92,7 @@ export default class ContributorsApp extends Component {
                         <h4><a href="https://nodejs.org/en/">NodeJs</a> | an open-source, cross-platform</h4>
                       </div>
                       <div className="contri-text">
+<<<<<<< HEAD
 
                         <p>{isEnglish ? 'The nDs application is running on 2 servers and the Backend commands are written in JavaScript on top of NodeJs. This helps the system to have unified in terms of programming languages ​​used throughout the App.' 
                         : 'Ứng dụng nDsApp đang chạy trên 2 máy chủ và các lệnh phía Backend được viết bằng JavaScript trên nền của NodeJs. Việc làm này giúp cho hệ thống có sự thống nhất về mặt ngôn ngữ lập trình được dùng trên toàn App.'}</p>
@@ -68,6 +102,13 @@ export default class ContributorsApp extends Component {
                   </div>
 
                   {/* GitHub */}
+=======
+                        <p>The nDs application is running on 2 servers and the Backend commands are written in JavaScript on top of NodeJs. This helps the system to have unified in terms of programming languages ​​used throughout the App.</p>
+                        (Ứng dụng nDsApp đang chạy trên 2 máy chủ và các lệnh phía Backend được viết bằng JavaScript trên nền của NodeJs. Việc làm này giúp cho hệ thống có sự thống nhất về mặt ngôn ngữ lập trình được dùng trên toàn App.)
+                      </div>
+                    </div>
+                  </div>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <div className="contribute">
                     <div className="contri-img">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/800px-Github-desktop-logo-symbol.svg.png" alt="logo GitHub"></img>
@@ -77,6 +118,7 @@ export default class ContributorsApp extends Component {
                         <h4><a href="https://github.com/">GitHub</a> | safe storage for source code</h4>
                       </div>
                       <div className="contri-text">
+<<<<<<< HEAD
                         <p>{isEnglish ? 'We use GitHub to host the source code for the application. This is a tool that is familiar to any software programmer, with security handy and easy to restore projects via cmd or terminal on Linux We have a number of other apps that are still hosted on this app' 
                         : 'Chúng tôi sử dụng GitHub để lưu trữ mã nguồn cho ứng dụng. Đây là một công cụ quen thuộc với bất kỳ lập trình viên phần mềm nào, với tính năng bảo mật tiện dụng và dễ dàng khôi phục các dự án thông qua cmd hoặc terminal trên Linux. Hiện chúng tôi có một số ứng dụng khác vẫn được lưu trữ trên ứng dụng này'}</p>
                        
@@ -85,6 +127,13 @@ export default class ContributorsApp extends Component {
                   </div>
 
                   {/* MongoDB */}
+=======
+                        <p>We use GitHub to host the source code for the application. This is a tool that is familiar to any software programmer, with security handy and easy to restore projects via cmd or terminal on Linux We have a number of other apps that are still hosted on this app</p>
+                        (Chúng tôi sử dụng GitHub để lưu trữ mã nguồn cho ứng dụng. Đây là một công cụ quen thuộc với bất kỳ lập trình viên phần mềm nào, với tính năng bảo mật tiện dụng và dễ dàng khôi phục các dự án thông qua cmd hoặc terminal trên Linux. Hiện chúng tôi có một số ứng dụng khác vẫn được lưu trữ trên ứng dụng này)
+                      </div>
+                    </div>                  
+                  </div>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <div className="contribute">
                     {/* <svg class="h-25" height="25" viewBox="0 0 100 25">
                       <g><path d="M11.71 10.41C10.31 4.33 7.39 2.71 6.65 1.57 6.34 1.06 6.07 0.54 5.84 0 5.8 0.54 5.73 0.88 5.26 1.29 4.32 2.11 0.35 5.3 0.01 12.21 -0.3 18.65 4.82 22.62 5.5 23.03 6.02 23.28 6.65 23.03 6.96 22.8 9.43 21.13 12.8 16.69 11.71 10.41" fill="#10AA50"></path>//leaf
@@ -111,6 +160,7 @@ export default class ContributorsApp extends Component {
                         <h4><a href="https://www.mongodb.com/">MongoDB</a> | trusted by millions of users</h4>
                       </div>
                       <div className="contri-text">
+<<<<<<< HEAD
                         <p>{isEnglish ? 'Regardless of data integrity in return for query flexibility and speed, we need a NoSql repository for the application. So MongoDB is our choice. They guarantee speed and also come with some risks but with nDsApp this is the database we use.' 
                         : 'Bỏ qua tính toàn vẹn của dữ liệu đổi lại sự linh hoạt và tốc độ truy vấn, chúng tôi cần một nơi lưu trữ NoSql cho ứng dụng. Vì thế MongoDB là sự lựa chọn của chúng tôi. Chúng đảm bảo về tốc độ và cũng gặp một số rủi ro nhưng với nDsApp thì đây là cơ sở dữ liệu chúng tôi tin dùng'}</p>
                        
@@ -119,6 +169,13 @@ export default class ContributorsApp extends Component {
                   </div>
 
                   {/* Visual Code */}
+=======
+                        <p>Regardless of data integrity in return for query flexibility and speed, we need a NoSql repository for the application. So MongoDB is our choice. They guarantee speed and also come with some risks but with nDsApp this is the database we use.</p>
+                        (Bỏ qua tính toàn vẹn của dữ liệu đổi lại sự linh hoạt và tốc độ truy vấn, chúng tôi cần một nơi lưu trữ NoSql cho ứng dụng. Vì thế MongoDB là sự lựa chọn của chúng tôi. Chúng đảm bảo về tốc độ và cũng gặp một số rủi ro nhưng với nDsApp thì đây là cơ sở dữ liệu chúng tôi tin dùng)
+                      </div>
+                    </div>  
+                  </div>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <div className="contribute">
                     <div className="contri-img">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/800px-Visual_Studio_Code_1.35_icon.svg.png" alt="logo Visual Code"></img>
@@ -128,15 +185,23 @@ export default class ContributorsApp extends Component {
                         <h4><a href="https://code.visualstudio.com/">Visual Code</a> | Open source-fast and full-featured</h4>
                       </div>
                       <div className="contri-text">
+<<<<<<< HEAD
                         <p>{isEnglish ? 'Visual Studio Code (VS Code or VSC) is one of the most popular source code editors. Its fast, lightweight, cross-platform support, lots of features, and our development team used it for coding.' 
                         : 'Visual Studio Code (VS Code hay VSC) là một trong những trình soạn thảo mã nguồn phổ biến nhất. Nhanh, nhẹ, hỗ trợ đa nền tảng, nhiều tính năng và nhóm phát triển chúng tôi đã dùng nó để phục vụ cho việc code'}</p>
 
+=======
+                        <p>Visual Studio Code (VS Code or VSC) is one of the most popular source code editors. It's fast, lightweight, cross-platform support, lots of features, and our development team used it for coding.</p>
+                        (Visual Studio Code (VS Code hay VSC) là một trong những trình soạn thảo mã nguồn phổ biến nhất. Nhanh, nhẹ, hỗ trợ đa nền tảng, nhiều tính năng và nhóm phát triển chúng tôi đã dùng nó để phục vụ cho việc code )
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                       </div>
                     </div>     
                    
                   </div>
+<<<<<<< HEAD
 
                   {/* StackOverflow */}
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <div className="contribute">
                     <div className="contri-img">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Stackoverflow_icon.png" alt="logo StackOverflow"></img>
@@ -146,6 +211,7 @@ export default class ContributorsApp extends Component {
                         <h4><a href="https://stackoverflow.com/">StackOverflow</a> | the best place to find and debug</h4>
                       </div>
                       <div className="contri-text">
+<<<<<<< HEAD
                         <p>{!isEnglish ? 'Là một môi trường trao đổi thông tin về lỗi và khắc phục lỗi của mọi lập trình viên trên khắp thế giới. Không ngoại lệ, trong quá trình triển khai dự án chúng tôi gặp rất nhiều vấn đề và StackOverflow là nơi nhóm chúng tôi tìm kiếm thông tin về các lỗi. Hầu hết tất cả đều được giải quyết.' 
                         : 'An environment for exchanging error information and correcting errors for developers around the world. No exception, during project implementation we ran into a lot of problems, and StackOverflow was where our team was looking for information about bugs. Almost all are resolved.'}</p>
                         
@@ -154,6 +220,13 @@ export default class ContributorsApp extends Component {
                   </div>
 
                   {/* Google Chrome */}
+=======
+                        <p>An environment for exchanging error information and correcting errors for developers around the world. No exception, during project implementation we ran into a lot of problems, and StackOverflow was where our team was looking for information about bugs. Almost all are resolved.</p>
+                        (Là một môi trường trao đổi thông tin về lỗi và khắc phục lỗi của mọi lập trình viên trên khắp thế giới. Không ngoại lệ, trong quá trình triển khai dự án chúng tôi gặp rất nhiều vấn đề và StackOverflow là nơi nhóm chúng tôi tìm kiếm thông tin về các lỗi. Hầu hết tất cả đều được giải quyết.)
+                      </div>
+                    </div>  
+                  </div>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <div className="contribute">
                     <div className="contri-img">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/800px-Google_Chrome_icon_%28September_2014%29.svg.png" alt="logo Google Chrome"></img>
@@ -163,6 +236,7 @@ export default class ContributorsApp extends Component {
                         <h4><a href="https://www.google.com/chrome/">Google Chrome</a> | find infinite information</h4>
                       </div>
                       <div className="contri-text">
+<<<<<<< HEAD
                         <p>{isEnglish ? 'As a program to search and access information pages on the Internet, all provided by Google and they are completely free. We looked for a lot of information in app building and more. Chrome is also the environment for us to test generated pages.' 
                         : 'Là một chương trình tìm kiếm và truy cập các trang thông tin trên mạng Internet, tất cả đều được Google cung cấp và chúng hoàn toàn miễn phí. Chúng tôi đã tìm kiếm rất nhiều thông tin trong việc xây dựng app và hơn thế nữa. Chrome cũng là môi trường để chúng tôi chạy thử nghiệm các trang được tạo ra.'}</p>
 
@@ -171,6 +245,13 @@ export default class ContributorsApp extends Component {
                   </div>
 
                   {/* Heroku Server*/}
+=======
+                        <p>As a program to search and access information pages on the Internet, all provided by Google and they are completely free. We looked for a lot of information in app building and more. Chrome is also the environment for us to test generated pages.</p>
+                        (Là một chương trình tìm kiếm và truy cập các trang thông tin trên mạng Internet, tất cả đều được Google cung cấp và chúng hoàn toàn miễn phí. Chúng tôi đã tìm kiếm rất nhiều thông tin trong việc xây dựng app và hơn thế nữa. Chrome cũng là môi trường để chúng tôi chạy thử nghiệm các trang được tạo ra.)
+                      </div>
+                    </div>  
+                  </div>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <div className="contribute">
                     <div className="contri-img">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cib-heroku_%28CoreUI_Icons_v1.0.0%29.svg/120px-Cib-heroku_%28CoreUI_Icons_v1.0.0%29.svg.png" alt="logo Heroku"></img>
@@ -180,6 +261,7 @@ export default class ContributorsApp extends Component {
                         <h4><a href="https://www.heroku.com/">Heroku Server</a> | Cloud platform for your projects</h4>
                       </div>
                       <div className="contri-text">
+<<<<<<< HEAD
                         <p>{isEnglish ? 'As a cloud application in the form of PaaS provides an environment for developers the simplest way to bring their application to market. Allows developers to freely focus on their core product without distraction in maintaining server, hardware, or infrastructure. nDsApp is operated on this cloud platform. There are paid and free versions available, depending on user needs.' 
                         : 'Là một ứng dụng đám mây dưới dạng PaaS cung cấp môi trường cho các nhà phát triển con đường đơn giản nhất để đưa ứng dụng của họ ra thị trường. Cho phép các nhà phát triển tự do tập trung vào sản phẩm cốt lõi của họ mà không bị phân tâm trong việc duy trì máy chủ, phần cứng hoặc cơ sở hạ tầng. Ứng dụng của chúng tôi được hoạt động trên nền tảng đám mây này. Hiện có phiên bản trả phí và miễn phí, tuỳ vào nhu cầu người dùng.'}</p>
                       </div>
@@ -204,6 +286,13 @@ export default class ContributorsApp extends Component {
                   </div>
 
                   {/* nDs Group */}
+=======
+                        <p>As a cloud application in the form of PaaS provides an environment for developers the simplest way to bring their application to market. Allows developers to freely focus on their core product without distraction in maintaining server, hardware, or infrastructure. nDsApp is operated on this cloud platform. There are paid and free versions available, depending on user needs.</p>
+                        (Là một ứng dụng đám mây dưới dạng PaaS cung cấp môi trường cho các nhà phát triển con đường đơn giản nhất để đưa ứng dụng của họ ra thị trường. Cho phép các nhà phát triển tự do tập trung vào sản phẩm cốt lõi của họ mà không bị phân tâm trong việc duy trì máy chủ, phần cứng hoặc cơ sở hạ tầng. Ứng dụng của chúng tôi được hoạt động trên nền tảng đám mây này. Hiện có phiên bản trả phí và miễn phí, tuỳ vào nhu cầu người dùng.)
+                      </div>
+                    </div>  
+                  </div>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   <div className="contribute">
                     <div className="contri-img">
                       <img src={img} alt="logo nDs group"></img>
@@ -213,17 +302,27 @@ export default class ContributorsApp extends Component {
                         <h4><a href="https://reactjs.org/">Other contributions & nDs Group</a> | Exclusion Limit </h4>
                       </div>
                       <div className="contri-text">
+<<<<<<< HEAD
                         <p>{isEnglish ? 'A great contribution to a few other personal or organizational components that we cannot fully mention. At the same time, the dedication of our development team to nDsApp is a cherished achievement, our team continues to improve the App gradually and continuously into the future.' 
                         : 'Một đóng góp không nhỏ từ những thành phần cá nhân hoặc tổ chức khác mà chúng tôi không thể nêu hết. Đồng thời, một sự cống hiến của nhóm phát triển của chúng tôi vào nDsApp là một thành tựu đáng trân trọng, Nhóm chúng tôi tiếp tục hoàn thiện App dần dần và liên tục trong tương lai'}</p>
                       
+=======
+                        <p>A great contribution to a few other personal or organizational components that we cannot fully mention. At the same time, the dedication of our development team to nDsApp is a cherished achievement, our team continues to improve the App gradually and continuously into the future.</p>
+                        (Một đóng góp không nhỏ từ những thành phần cá nhân hoặc tổ chức khác mà chúng tôi không thể nêu hết. Đồng thời, một sự cống hiến của nhóm phát triển của chúng tôi vào nDsApp là một thành tựu đáng trân trọng, Nhóm chúng tôi tiếp tục hoàn thiện App dần dần và liên tục trong tương lai)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                       </div>
                     </div>  
         
                   </div>
                   <Typography gutterBottom={true} variant="subtitle1">
+<<<<<<< HEAD
                   {isEnglish ? ' Once again, the app management board respectfully sends to the members and organizations that make a very important contribution to the construction and development of this application. To me it is a spiritual pleasure a pride for the team to develop. Marking an invaluable product for participating in software programming - the Development Teams website./ .' 
                         : ' Một lần nữa ban quản lí app trân trọng gửi đến các  thành viên, tổ chức có đóng góp rất là quan trọng vào việc xấy dựng và phát triển ứng dụng này. Với tôi đó là một niềm vui tinh thần một niềm tự hào cho nhóm phát triển. Đánh dấu một sản phẩm vô giá cho việc tham gia vào lập trình phần mềm  - website của Nhóm Phát Triển./ .'}
                   
+=======
+                    Once again, the app management board respectfully sends to the members and organizations that make a very important contribution to the construction and development of this application. To me it is a spiritual pleasure a pride for the team to develop. Marking an invaluable product for participating in software programming - the Development Team's website./ .
+                    (Một lần nữa ban quản lí app trân trọng gửi đến các  thành viên, tổ chức có đóng góp rất là quan trọng vào việc xấy dựng và phát triển ứng dụng này. Với tôi đó là một niềm vui tinh thần một niềm tự hào cho nhóm phát triển. Đánh dấu một sản phẩm vô giá cho việc tham gia vào lập trình phần mềm  - website của Nhóm Phát Triển./ .)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                   </Typography>
                   <span className="writer-Contri">According to nDs</span>
                 </div>

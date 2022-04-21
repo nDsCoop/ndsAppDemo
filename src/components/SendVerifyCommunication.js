@@ -264,8 +264,12 @@ class SendVerifyCommunication extends Component {
                             placeholder="Email Registed" 
                             required type="email" name="email"
                             value = {_.get(info, "email", '')}
+<<<<<<< HEAD
                             onChange={(e) => this.onTxtfieldChange(e)}
                             autoFocus
+=======
+                            onChange={(e) => this.onTxtfieldChange(e) }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             id="email" ></input>
                         </li>
                         <li>

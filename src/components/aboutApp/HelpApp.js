@@ -18,11 +18,15 @@ export default class ContributorsApp extends Component {
     constructor(props){
         super(props);
         this.state = {
+<<<<<<< HEAD
             questKeyHome: [],
             questKeyMusic: [],
             questKeyWeather: [],
             questKeyChat: [],
             questKeyRetrille: [],
+=======
+            questKey: [],
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             showBtnBackToTop: false,
             linkActive: null
         }
@@ -61,6 +65,7 @@ export default class ContributorsApp extends Component {
 
 
 
+<<<<<<< HEAD
     toggleActiveQuestion = (key, app) => {
        
         switch (app) {
@@ -162,11 +167,35 @@ export default class ContributorsApp extends Component {
                 default:
                     break;
             }
+=======
+    toggleActiveQuestion = (key) => {
+        // console.log(key)
+
+        const {questKey} = this.state;
+        if(questKey.includes(key.toString())){
+
+            let temps = _.difference(questKey, [key.toString()])
+            // console.log(temps)
+            this.setState({
+                questKey: temps
+            }) 
+
+        }else{
+
+            let temps = _.uniq([...questKey, key.toString()]);
+            // console.log(temps)
+            this.setState({
+                questKey: temps
+            })  
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
         }
         
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     render(){
         let listQuestionsHome = [];
         let listQuestionsMusic = [];
@@ -222,17 +251,30 @@ export default class ContributorsApp extends Component {
                 <div className="instruction-App" ref={ref}>
                     {listQuestionsHome.map((quest, key) =>{
                         
+<<<<<<< HEAD
                         return <div key={key} className={`instruction ${(this.state.questKeyHome.includes(key.toString()) ? 'active' : null)}`}>
                             <div onClick={() => this.toggleActiveQuestion(key, 0)} className="header-quest">
                                 <span>{quest.title}</span>
                                 <span>
                                     <IconButton>
                                         { (this.state.questKeyHome.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+=======
+                        return <div key={key} className={`instruction ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+                            <div onClick={() => this.toggleActiveQuestion(key)} className="header-quest">
+                                <span>{quest.title}</span>
+                                <span>
+                                    <IconButton>
+                                        { (this.state.questKey.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                     </IconButton>
                                 </span>
                             </div>
                             {/* <div className={`body-quest ${this.state.activeQuestTxt ? "active" : ""}`}> */}
+<<<<<<< HEAD
                             <div className={`body-quest ${(this.state.questKeyHome.includes(key.toString()) ? 'active' : null)}`}>
+=======
+                            <div className={`body-quest ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                 {quest.resolve}<br />{quest.resolve1}<br />{quest.resolve2}<br />{quest.resolve3}<br />{quest.resolve4}
                             </div>
                         </div>
@@ -245,17 +287,30 @@ export default class ContributorsApp extends Component {
                 <div className="instruction-App">
                     {listQuestionsReTrille.map((quest, key) =>{
                         
+<<<<<<< HEAD
                         return <div key={key} className={`instruction ${(this.state.questKeyRetrille.includes(key.toString()) ? 'active' : null)}`}>
                             <div onClick={() => this.toggleActiveQuestion(key, 1)} className="header-quest">
                                 <span>{quest.title}</span>
                                 <span>
                                     <IconButton>
                                         { (this.state.questKeyRetrille.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+=======
+                        return <div key={key} className={`instruction ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+                            <div onClick={() => this.toggleActiveQuestion(key)} className="header-quest">
+                                <span>{quest.title}</span>
+                                <span>
+                                    <IconButton>
+                                        { (this.state.questKey.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                     </IconButton>
                                 </span>
                             </div>
                             {/* <div className={`body-quest ${this.state.activeQuestTxt ? "active" : ""}`}> */}
+<<<<<<< HEAD
                             <div className={`body-quest ${(this.state.questKeyRetrille.includes(key.toString()) ? 'active' : null)}`}>
+=======
+                            <div className={`body-quest ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                 {quest.resolve}<br />{quest.resolve1}<br />{quest.resolve2}<br />{quest.resolve3}<br />{quest.resolve4}
                             </div>
                         </div>
@@ -268,17 +323,30 @@ export default class ContributorsApp extends Component {
                 <div className="instruction-App">
                     {listQuestionsChat.map((quest, key) =>{
                         
+<<<<<<< HEAD
                         return <div key={key} className={`instruction ${(this.state.questKeyChat.includes(key.toString()) ? 'active' : null)}`}>
                             <div onClick={() => this.toggleActiveQuestion(key, 2)} className="header-quest">
                                 <span>{quest.title}</span>
                                 <span>
                                     <IconButton>
                                         { (this.state.questKeyChat.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+=======
+                        return <div key={key} className={`instruction ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+                            <div onClick={() => this.toggleActiveQuestion(key)} className="header-quest">
+                                <span>{quest.title}</span>
+                                <span>
+                                    <IconButton>
+                                        { (this.state.questKey.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                     </IconButton>
                                 </span>
                             </div>
                             {/* <div className={`body-quest ${this.state.activeQuestTxt ? "active" : ""}`}> */}
+<<<<<<< HEAD
                             <div className={`body-quest ${(this.state.questKeyChat.includes(key.toString()) ? 'active' : null)}`}>
+=======
+                            <div className={`body-quest ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                 {quest.resolve}<br />{quest.resolve1}<br />{quest.resolve2}<br />{quest.resolve3}<br />{quest.resolve4}
                             </div>
                         </div>
@@ -291,17 +359,30 @@ export default class ContributorsApp extends Component {
                 <div className="instruction-App">
                     {listQuestionsMusic.map((quest, key) =>{
                         
+<<<<<<< HEAD
                         return <div key={key} className={`instruction ${(this.state.questKeyMusic.includes(key.toString()) ? 'active' : null)}`}>
                             <div onClick={() => this.toggleActiveQuestion(key, 3)} className="header-quest">
                                 <span>{quest.title}</span>
                                 <span>
                                     <IconButton>
                                         { (this.state.questKeyMusic.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+=======
+                        return <div key={key} className={`instruction ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+                            <div onClick={() => this.toggleActiveQuestion(key)} className="header-quest">
+                                <span>{quest.title}</span>
+                                <span>
+                                    <IconButton>
+                                        { (this.state.questKey.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                     </IconButton>
                                 </span>
                             </div>
                             {/* <div className={`body-quest ${this.state.activeQuestTxt ? "active" : ""}`}> */}
+<<<<<<< HEAD
                             <div className={`body-quest ${(this.state.questKeyMusic.includes(key.toString()) ? 'active' : null)}`}>
+=======
+                            <div className={`body-quest ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                 {quest.resolve}<br />{quest.resolve1}<br />{quest.resolve2}<br />{quest.resolve3}<br />{quest.resolve4}
                             </div>
                         </div>
@@ -314,17 +395,30 @@ export default class ContributorsApp extends Component {
                 <div className="instruction-App">
                     {listQuestionsWeather.map((quest, key) =>{
                         
+<<<<<<< HEAD
                         return <div key={key} className={`instruction ${(this.state.questKeyWeather.includes(key.toString()) ? 'active' : null)}`}>
                             <div onClick={() => this.toggleActiveQuestion(key, 4)} className="header-quest">
                                 <span>{quest.title}</span>
                                 <span>
                                     <IconButton>
                                         { (this.state.questKeyWeather.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+=======
+                        return <div key={key} className={`instruction ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+                            <div onClick={() => this.toggleActiveQuestion(key)} className="header-quest">
+                                <span>{quest.title}</span>
+                                <span>
+                                    <IconButton>
+                                        { (this.state.questKey.includes(key.toString())) ? <RiSubtractLine /> : <BsPlus /> }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                     </IconButton>
                                 </span>
                             </div>
                             {/* <div className={`body-quest ${this.state.activeQuestTxt ? "active" : ""}`}> */}
+<<<<<<< HEAD
                             <div className={`body-quest ${(this.state.questKeyWeather.includes(key.toString()) ? 'active' : null)}`}>
+=======
+                            <div className={`body-quest ${(this.state.questKey.includes(key.toString()) ? 'active' : null)}`}>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                 {quest.resolve}<br />{quest.resolve1}<br />{quest.resolve2}<br />{quest.resolve3}<br />{quest.resolve4}
                             </div>
                         </div>

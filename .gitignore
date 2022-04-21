@@ -1,5 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+<<<<<<< HEAD
 // eslint-disable-next-line
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 # dependencies
 /node_modules
 /.pnp

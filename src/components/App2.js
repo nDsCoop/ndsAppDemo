@@ -52,10 +52,17 @@ const App2 = () => {
   useEffect(() => {
     checkDarkMode();
 
+<<<<<<< HEAD
     // if (navigator.userAgent.match(/Android/i)) {
     //   body.style.overscrollBehavior = "none";
     //   // this is to disable pull refresh on android
     // }
+=======
+    if (navigator.userAgent.match(/Android/i)) {
+      body.style.overscrollBehavior = "none";
+      // this is to disable pull refresh on android
+    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   }, []);
 
   useEffect(() => {

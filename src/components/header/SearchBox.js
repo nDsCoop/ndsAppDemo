@@ -169,8 +169,11 @@ const SearchBox = ({ history, location }) => {
 
   return (
     <>
+<<<<<<< HEAD
 
       {/* button remove input search */}
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       <IconButton
         onClick={() => {
           setSearchState("home");
@@ -184,8 +187,11 @@ const SearchBox = ({ history, location }) => {
       >
         <ArrowBack />
       </IconButton>
+<<<<<<< HEAD
 
       {/* from get search value from user typing input  */}
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       <form style={{ width: "100%" }} onSubmit={e => onSearchSubmit(e)}>
         <InputBase
           fullWidth
@@ -202,8 +208,11 @@ const SearchBox = ({ history, location }) => {
         />
       </form>
 
+<<<<<<< HEAD
 
       {/* show result search from api youtube  */}
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       <Popper
         className="searchPopper"
         open={isPopperOpen}

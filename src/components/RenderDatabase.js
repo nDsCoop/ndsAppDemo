@@ -141,7 +141,10 @@ const RenderDatabase = props => {
       sdThumbnail: `https://img.youtube.com/vi/${song.videoId}/sddefault.jpg`
       // this is the url of the max resolution of thumbnail
     });
+<<<<<<< HEAD
     // window.location.replace(`/ndsappbeta/music/play?id=${song.videoId}`);
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   };
 
   const {

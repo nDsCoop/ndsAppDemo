@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import defaultImg from '../images/logoMainLar.svg';
 import loadingImg from '../images/loadingImg.gif'
+=======
+import defaultImg from '../images/svgnds.png';
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 import _ from 'lodash';
 import classNames from 'classnames';
 import { IconButton, Tooltip } from '@material-ui/core';
 import { MdEdit, MdCheck } from 'react-icons/md';
 import { RiImageEditFill } from 'react-icons/ri';
+<<<<<<< HEAD
 import { IoIosLogIn } from 'react-icons/io';
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 import { GoVerified, GoUnverified } from 'react-icons/go';
 import Dropzone from "react-dropzone";
 import {encrypt, encrypt2} from '../helpers/en_deCrypt';
@@ -15,16 +22,27 @@ import {encrypt, encrypt2} from '../helpers/en_deCrypt';
 import fetchJsonp from "fetch-jsonp";
 import ChangePassword from './ChangePassword';
 import SendVerifyCommunication from './SendVerifyCommunication';
+<<<<<<< HEAD
 const GeoAPI = "https://ipapi.co/jsonp";
 
 
+=======
+
+const GeoAPI = "https://ipapi.co/jsonp";
+
+
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 export class UserBar extends Component {
     constructor(){
         super()
         this.state = {
             message: null,
             showUserFrom : false,
+<<<<<<< HEAD
             loadingRequire: false,
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             isLogin: true,
             editAcc: false,
             editPassword: false,
@@ -48,6 +66,7 @@ export class UserBar extends Component {
                 country: '',
                 phone: '',
                 ID: '',
+<<<<<<< HEAD
             },
             // fieldFocus: 'email',
         }
@@ -65,6 +84,12 @@ export class UserBar extends Component {
     // }
     
 
+=======
+            }
+        }
+       
+    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     handleSendGetPassword = (e) => {
         e.preventDefault();
         const {store} = this.props;
@@ -86,14 +111,23 @@ export class UserBar extends Component {
                 }
             })
         });
+<<<<<<< HEAD
     }
 
+=======
+
+
+    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     isFormGetPassword = (e) => {
         e.preventDefault();
         this.setState({
             isFormGetPassword: true,
             showUserFrom: false,
+<<<<<<< HEAD
             // fieldFocus: "password"
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         })
     }
 
@@ -103,8 +137,12 @@ export class UserBar extends Component {
         const {store} = this.props;
         const {oldPassword, newPassword, reNewPassword, user} = this.state;
         this.setState({
+<<<<<<< HEAD
             message: null,
             loadingRequire: true
+=======
+            message: null
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         }, () => {
             if(newPassword === reNewPassword){
                
@@ -120,7 +158,10 @@ export class UserBar extends Component {
                         oldPassword: null,
                         newPassword: null,
                         reNewPassword: null,
+<<<<<<< HEAD
                         loadingRequire: false
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
                     })
                 }).catch((err) => {
@@ -129,8 +170,12 @@ export class UserBar extends Component {
                         message: {
                             body: err,
                             type: 'error'
+<<<<<<< HEAD
                         },
                         loadingRequire: false
+=======
+                        }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     })
                     });
 
@@ -139,8 +184,12 @@ export class UserBar extends Component {
                     message: {
                         body: 'Password not Comfirm or an another Error',
                         type: 'error'
+<<<<<<< HEAD
                     },
                     loadingRequire: false
+=======
+                    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 })
             }
 
@@ -152,9 +201,15 @@ export class UserBar extends Component {
         e.preventDefault();
         this.setState({
             showUserMenu: false,
+<<<<<<< HEAD
             editPassword: true,
             fieldFocus: "getEmail"
         });
+=======
+            editPassword: true
+
+        })
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
     }
 
@@ -166,14 +221,21 @@ export class UserBar extends Component {
         user[field] = userId;
         this.setState({ user: user})
         console.log('ID of user random: ', userId);
+<<<<<<< HEAD
     }
 
+=======
+      }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     dec2hex = (dec) => {
         return dec < 10
         ? '0' + _.toString(dec)
         : dec.toString(16)
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     generateId = (len) => {
         var arr = new Uint8Array((len || 40) / 2)
         window.crypto.getRandomValues(arr)
@@ -187,6 +249,10 @@ export class UserBar extends Component {
         this.setState({
             isLogin: !isLogin,
         })
+<<<<<<< HEAD
+=======
+      
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     }
 
     onDrop = (files) => {
@@ -219,7 +285,10 @@ export class UserBar extends Component {
                 let { user } = this.state;
                 const field = 'ipClient';
                 user[field] = json;
+<<<<<<< HEAD
                 console.log("user from device: ", user)
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 this.setState({ user: user})
               })
               .catch(function(ex) {
@@ -266,8 +335,12 @@ export class UserBar extends Component {
         const hashPassword = encrypt2(encrypt(user.password));
         e.preventDefault();
         this.setState({
+<<<<<<< HEAD
             message: null,
             loadingRequire: true
+=======
+            message: null
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         }, () => {
             if(isLogin){
                 try{
@@ -280,8 +353,12 @@ export class UserBar extends Component {
                             message: null,
                             showUserFrom: false,
                             showUserMenu: false,
+<<<<<<< HEAD
                             user: user,
                             loadingRequire: false
+=======
+                            user: user
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         })
         
                     }).catch((err) => {
@@ -290,8 +367,12 @@ export class UserBar extends Component {
                             message: {
                                 body: err,
                                 type: 'error'
+<<<<<<< HEAD
                             },
                             loadingRequire: false
+=======
+                            }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         })
                     });
                 }
@@ -299,11 +380,17 @@ export class UserBar extends Component {
                     console.log(err);
                     this.setState({
                         message: {
+<<<<<<< HEAD
                             body: 'An error occurred in client, please try again later!',
                             type: 'error'
                         },
                         loadingRequire: false
 
+=======
+                            body: 'An error occurred, please try again later!',
+                            type: 'error'
+                        }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     })
                 }
                
@@ -316,8 +403,12 @@ export class UserBar extends Component {
                             message: {
                                 body: 'User created',
                                 type: 'Success'
+<<<<<<< HEAD
                             },
                             loadingRequire: false
+=======
+                            }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         }, () => {
                             // now login this user
                             store.login(user.email, hashPassword).then((_) => { 
@@ -333,17 +424,27 @@ export class UserBar extends Component {
                                 showUserMenu: false,
                                 isFormGetPassword: false,
                                 user : user,
+<<<<<<< HEAD
                                 loadingRequire: false
                             })
                             
+=======
+
+                            })
+            
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         }).catch((err) => {
                             console.log(err);
                             this.setState({
                                 message: {
                                     body: err,
                                     type: 'error'
+<<<<<<< HEAD
                                 },
                                 loadingRequire: false
+=======
+                                }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             })
                             });
                         })
@@ -353,8 +454,12 @@ export class UserBar extends Component {
                             message: {
                                 body: err,
                                 type: 'error'
+<<<<<<< HEAD
                             },
                             loadingRequire: false
+=======
+                            }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         })
                     });
                 }else{
@@ -363,8 +468,12 @@ export class UserBar extends Component {
                         message: {
                             body: 'Password not Comfirm',
                             type: 'error'
+<<<<<<< HEAD
                         },
                         loadingRequire: false
+=======
+                        }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     })
                 }
                 
@@ -403,6 +512,7 @@ export class UserBar extends Component {
         const phone = _.get(me, 'phone');
         const birthday = _.get(me, 'birthday');
         const verified = _.get(me, 'verify');
+<<<<<<< HEAD
 
        
         return (
@@ -432,6 +542,19 @@ export class UserBar extends Component {
                     :
                     null
                 }
+=======
+        return (
+    <>
+        <div className="user-bar">
+            { !me ? <button type="button" onClick={(e) => this.setState({showUserFrom: true})} className="login-btn">Sign In</button> : null}
+            <div className="name-user">{_.get(me, 'name')}</div>
+            <div className="img-user">
+                <img className="img-profile" src={profileImg ? `http://localhost:8080/${profileImg}` : defaultImg} onClick={(e) => this.setState({showUserMenu: true})}  alt="user-img"></img>
+            </div>
+
+            { me && this.state.showUserMenu ?  <div className="user-form" ref = {(ref) => this.ref = ref}>
+                <form>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 <ul className="form-container">
                     <li>
                         <h4>Your Account</h4>
@@ -461,7 +584,11 @@ export class UserBar extends Component {
                     null
                     }
                     <li className ="header-menu">
+<<<<<<< HEAD
                         <img src={`https://ndschatserver.herokuapp.com/${profileImg}`} alt="user-img" />
+=======
+                        <img src={`http://localhost:8080/${profileImg}`} alt="user-img" />
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         <div className="edit-avatar-icon">
                             <Dropzone onDrop={this.onDrop}>
                                 {({getRootProps, getInputProps}) => (
@@ -537,12 +664,15 @@ export class UserBar extends Component {
             }
              { !me && this.state.showUserFrom ? <div className="user-form" ref = {(ref) => this.ref = ref}>
                 <form onSubmit= {this.onSubmit}>
+<<<<<<< HEAD
                 {   this.state.loadingRequire ? <div className="loadingGif-User">
                         <img className="img-loading-require" src = {loadingImg} alt="" />
                     </div>
                     :
                     null
                 }
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 <ul className="form-container">
                     <li>
                         <h4>Sign In / Register Your Account</h4>
@@ -559,7 +689,10 @@ export class UserBar extends Component {
                         </label>
                         <input onChange={(e) => this.onTxtfieldChange(e) } 
                         placeholder="Your-Name" 
+<<<<<<< HEAD
                         autoFocus
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         required type="text" name="name"
                         value = {_.get(user, 'name')} 
                         id="name" ></input>
@@ -576,7 +709,10 @@ export class UserBar extends Component {
                         placeholder="example.vn@nds.com" 
                         required type="email" name="email"
                         value = {_.get(user, 'email')} 
+<<<<<<< HEAD
                         autoFocus
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         id="email" ></input>
                     </li>
                     <li>
@@ -627,12 +763,15 @@ export class UserBar extends Component {
             }
                   {this.state.editPassword ? <div className="user-form" ref = {(ref) => this.ref = ref}>
                     <form onSubmit={this.handleEditPassword}>
+<<<<<<< HEAD
                     {   this.state.loadingRequire ? <div className="loadingGif-User">
                         <img className="img-loading-require" src = {loadingImg} alt="" />
                         </div>
                         :
                         null
                     }
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     <ul className="form-container">
                         <li>
                             <h4>Change Password</h4>
@@ -651,7 +790,10 @@ export class UserBar extends Component {
                             onChange = {({target})=>{
                                 this.setState({ oldPassword: target.value })
                             }} 
+<<<<<<< HEAD
                             autoFocus
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             id="password" ></input>
                         </li>
                         <li>
@@ -664,7 +806,11 @@ export class UserBar extends Component {
                             onChange = {({target})=>{
                                 this.setState({ newPassword: target.value })
                             }} 
+<<<<<<< HEAD
                             id="newPassword" name="newPassword" ></input>
+=======
+                            id="password" name="password" ></input>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         </li>
                         <li>
                             <label htmlFor="repassword">Comfirm new Password</label>
@@ -713,8 +859,12 @@ export class UserBar extends Component {
                                 onChange = {({target})=>{
                                     this.setState({ email: target.value })
                                 }} 
+<<<<<<< HEAD
                                 autoFocus
                                 id="getEmail" ></input>
+=======
+                                id="password" ></input>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             </li>
                             <div className="footer-menu">
                             <div className="img">

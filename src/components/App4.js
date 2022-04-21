@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { FaAlignLeft, FaEye } from 'react-icons/fa';
+<<<<<<< HEAD
 import {Link, Route, Switch, Redirect } from 'react-router-dom'
+=======
+// import {Link, Route, Switch, Redirect } from 'react-router-dom'
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 import defaultImg from '../images/svgnds.png';
 import _ from 'lodash';
 import classNames from 'classnames';
@@ -771,16 +775,31 @@ export default class App4 extends Component {
     // }
 
     componentDidUpdate(prevProps){
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         // console.log(this.state.txtMessageTranslated, this.state.keyWordTranslated, this.state.typeTranslated)
         this.scrollMessagesToBottom();
         // if (prevProps.resource !== this.props.resource) {
         //     this.setState({addNotiSignal: false})
         // }
+<<<<<<< HEAD
 
     }
     
     
+=======
+    }
+    
+    
+    // scrollMessagesToBottom = () => {
+    //     if(this.messagesRef){
+    //         this.messagesRef.scrollTop = this.messagesRef.scrollHeight;
+    //     }
+    // }
+ 
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     
     handleToggle = () =>{
         this.setState({isOpen:!this.state.isOpen})
@@ -842,31 +861,54 @@ export default class App4 extends Component {
 					</div>
 					
 					<div className={this.state.isOpen ? "nav-items show-nav-items" : "nav-items"} >
+<<<<<<< HEAD
                         
                         <a href={"javascript:void(0)"}>
+=======
+                        <a href="">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 							<div onClick={() => this.toggleActiveWindow(1)} className={classNames('nav-item', {'active': this.state.isChat })}>
 								ReTrille
 							</div>
 						</a>
+<<<<<<< HEAD
                        
 						<a href={"javascript:void(0)"}>
+=======
+						<a href="">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 							<div onClick={() => this.toggleActiveWindow(2)} className={classNames('nav-item', {'active': this.state.isWrite})}>
                                 Writting Voice
 							</div>
 						</a>
+<<<<<<< HEAD
                         
 						<a href={"javascript:void(0)"}>
+=======
+						<a href="">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 							<div onClick={() => this.toggleActiveWindow(3)}  className={classNames('nav-item', {'active': this.state.isShowFormAddMessage })}>
 								Add Messgage
 							</div>
 						</a>
+<<<<<<< HEAD
                       
                         <a href={"javascript:void(0)"}>
+=======
+                        <a href="">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 							<div onClick={() => this.toggleActiveWindow(4)}  className={classNames('nav-item', {'active': this.state.isShowInstruction })}>
 								Instruction
 							</div>
 						</a>
+<<<<<<< HEAD
 					</div>        
+=======
+                        
+					</div>
+                                
+                   
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 </div>
 
                 <div className="main-retrille">
@@ -921,7 +963,10 @@ export default class App4 extends Component {
                                 </span>
                                 <p>something</p>
                             </li> */}
+<<<<<<< HEAD
                            
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         </ul>
                     </div>
 
@@ -931,7 +976,13 @@ export default class App4 extends Component {
                         <div className="right-retrille-main">
                             <div className="chat-content-retrille">
                             <ul className="chat" ref={(ref) => this.messagesRef = ref}>
+<<<<<<< HEAD
                           
+=======
+
+
+                                
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             {messages.map((data, index) => (
                                 <div key={data._id}>
                                     {data.me ? this.renderMessage('self', data) : (this.renderMessage('other', data))}
@@ -939,6 +990,11 @@ export default class App4 extends Component {
                             ))}
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             </ul>
                             </div>
                             {!(reportViolations === null) ? <Draggable style={{
@@ -1099,8 +1155,19 @@ export default class App4 extends Component {
                                         <p></p>
                                     </li>
                                     
+<<<<<<< HEAD
                                 
                                     
+=======
+                                    {/*<li>
+                                        <span>
+                                            <IconButton style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                <BsMic/>
+                                            </IconButton>
+                                        </span>
+                                        <p></p>
+                                    </li> */}
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                 </ul>
                             </div>  
                         </div>
@@ -1323,10 +1390,18 @@ export default class App4 extends Component {
                         : null
                     }
                 </div>
+<<<<<<< HEAD
 
                 <NotificationProvider state = {this.state.addNotiSignal} type = {this.state.typeNoti} message = {this.state.newNotification} />
 
             </div>
+=======
+               
+                
+                <NotificationProvider state = {this.state.addNotiSignal} type = {this.state.typeNoti} message = {this.state.newNotification} />
+            </div>
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         )
 
     }

@@ -34,6 +34,7 @@ export default class Store {
 
     }
 
+<<<<<<< HEAD
                 
     //function edit mark
     editMark(data){
@@ -77,13 +78,18 @@ export default class Store {
     }
 
     //get all mark list from store
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getAllMarkOther(){
 
         return this.allMarkOther.valueSeq()
 
     }
 
+<<<<<<< HEAD
     //get all mark list of other user from db server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     fetchAllMarkOther(){
         const userToken =this.getUserTokenId();
         const configReTrille = window.sessionStorage.getItem("allMarkOther");
@@ -92,10 +98,16 @@ export default class Store {
             config = JSON.parse(configReTrille);
         }catch (err) {console.log(err)}
 
+<<<<<<< HEAD
         //get list mark from session store
         if(config && userToken){
           
             // console.log('Marks in cache store', config)
+=======
+        if(config && userToken){
+          
+            console.log('Marks in cache store', config)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             _.each(config, (item) => {
                 const id = _.get(item, '_id', '')
                 this.allMarkOther = this.allMarkOther.set(id, item)
@@ -110,11 +122,18 @@ export default class Store {
                         authorization: userToken,
                     }
                 }
+<<<<<<< HEAD
                     //send request 'api/marks/allother' to server
                     this.service.get(`api/marks/allother`, options).then((res) => {
     
                         // console.log("data marks form server",)
                         //create new mark array of other user
+=======
+                
+                    this.service.get(`api/marks/allother`, options).then((res) => {
+    
+                        // console.log("data marks form server",)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                        const marks = res.data
                         _.each(marks, (mark) => {
                             // this.messageDefaults.push(messagevoice)
@@ -137,7 +156,11 @@ export default class Store {
         
     }
 
+<<<<<<< HEAD
     processData = async (item) => {
+=======
+    proccessData = async (item) => {
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         try{
             // console.log(item.country)
             await fetch(`https://disease.sh/v3/covid-19/countries/${item.country}`)
@@ -154,7 +177,11 @@ export default class Store {
                     deathsCvid19: data.deaths,
                     recoveredPerOneMillionCvid19: data.recoveredPerOneMillion
                 }
+<<<<<<< HEAD
                 // console.log("mark after render 0 ", item)
+=======
+                console.log("mark after render 0 ", item)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 const id = _.get(item, '_id', '')
                 this.markList = this.markList.set(id, item)
               
@@ -165,13 +192,20 @@ export default class Store {
        
        
     }
+<<<<<<< HEAD
 
     //get info current from store and get from api open weatherapi
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     processlistMarkMe = async (item) => {
        
             try{
               
+<<<<<<< HEAD
                 // console.log(item.lat, item.lng)
+=======
+                console.log(item.lat, item.lng)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 await fetch(`https://api.weatherapi.com/v1/forecast.json?key=510cbd14438a4e33bcc15040202911&q=${(item.lat).toFixed(2)},${(item.lng).toFixed(2)}&day=4`)
                     .then(function(response) {
                         return response.json();
@@ -210,8 +244,13 @@ export default class Store {
                                     sunrise: data.forecast.forecastday[0].astro.sunrise,
                                     sunset: data.forecast.forecastday[0].astro.sunset,
                                 }
+<<<<<<< HEAD
                                 //get info and process data before save new info to store
                                 this.processData(item)
+=======
+                                
+                                this.proccessData(item)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
                             })
                            
@@ -226,14 +265,20 @@ export default class Store {
     
     }
 
+<<<<<<< HEAD
     //get list mark of user
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getMarksOfMe(){
         
         return this.markList.valueSeq();
     }
 
+<<<<<<< HEAD
 
     //get all mark list of current user
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     fetchMarksListOfMe(callback = () => {}){
         const userToken =this.getUserTokenId();
         const configReTrille = window.sessionStorage.getItem("marksListOfMe");
@@ -261,7 +306,11 @@ export default class Store {
             }
             this.service.get(`api/marks/me`, options).then((res) => {
                 const markList = res.data;
+<<<<<<< HEAD
                 // console.log("marks from db: ", res.data);
+=======
+                console.log("marks from db: ", res.data);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 let temp = markList.length
                 _.each(markList, (item) => {
                     
@@ -286,10 +335,17 @@ export default class Store {
     }
 
    
+<<<<<<< HEAD
     // add mark to db
     addNewMark = (data) => {
         const userToken = this.getUserTokenId();       
         // console.log(data)
+=======
+
+    addNewMark = (data) => {
+        const userToken = this.getUserTokenId();       
+        console.log(data)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
        
             return new Promise((resolve, reject) => {
 
@@ -300,11 +356,17 @@ export default class Store {
                             authorization: userToken,
                         }
                     }
+<<<<<<< HEAD
 
                 //send request add new mark
                 this.service.post('api/marks', data, options).then((res) => {
 
                     // console.log("newMark Created ", res.data);
+=======
+                this.service.post('api/marks', data, options).then((res) => {
+
+                    console.log("newMark Created ", res.data);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     //proccess new mark to add cache store for user cant see it
                         window.sessionStorage.removeItem('marksListOfMe')
                         this.processlistMarkMe(res.data)
@@ -325,7 +387,11 @@ export default class Store {
         })
     }
 
+<<<<<<< HEAD
     // translate data with request language
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     translateBody = (data) => {
         let msgLang = null;
         //if add langmic need change here to proccess info
@@ -368,7 +434,11 @@ export default class Store {
     
         // console.log(transcript);
         const messageList = this.messageDefaults.valueSeq().toArray();
+<<<<<<< HEAD
         // console.log(messageList);
+=======
+        console.log(messageList);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         let messageList2 = [];
         let messageList3 = [];
        
@@ -399,7 +469,10 @@ export default class Store {
         
     }
 
+<<<<<<< HEAD
     //add new Voice message
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     addMessageVoice(transcript) {
         if(transcript){
 
@@ -421,11 +494,17 @@ export default class Store {
             return new Promise((resolve, reject) => {
                 const userToken = this.getUserTokenId();
                 if(userToken){
+<<<<<<< HEAD
                     //find compare message 
                     this.proccessTranscript(transcript, (err, result) => {
                         if(err){
                             console.log('err')
                             //call translate function
+=======
+                    this.proccessTranscript(transcript, (err, result) => {
+                        if(err){
+                            console.log('err')
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             this.translateBody(transcript).then((res) => {
 
                                 const currentUser =this.getCurrentUser();
@@ -455,7 +534,11 @@ export default class Store {
                             
                             return reject(err.message); 
                         }
+<<<<<<< HEAD
                         //call translate function
+=======
+                        
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         this.translateBody(transcript).then((res) => {
 
                             const currentUser =this.getCurrentUser();
@@ -484,7 +567,10 @@ export default class Store {
                             console.log("An error translating");
                         })
                         setTimeout(() => {
+<<<<<<< HEAD
                             //call translate function
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             this.translateBody(result.txtMessage).then((res) => {
                                 const messageIdReply = new ObjectID().toString();
                                 const reply = {
@@ -526,14 +612,20 @@ export default class Store {
             console.log("An Error Occured")
         }
     }
+<<<<<<< HEAD
 
     //get list type voice from store
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getTypeVoices(){
 
         return this.listTypeMessageDefaults.valueSeq();
     }
 
+<<<<<<< HEAD
      //get list message voice from store
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getMessageVoices(){
 
         // let messages = new OrderedMap();
@@ -543,7 +635,10 @@ export default class Store {
         return this.messageVoices.valueSeq();
     }
 
+<<<<<<< HEAD
     //fecth type voice from 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     fetchTypeVoices() {
        
         const userToken =this.getUserTokenId();
@@ -553,7 +648,11 @@ export default class Store {
                     authorization: userToken,
                 }
             }
+<<<<<<< HEAD
                 //send request 'api/messagevoices/types' to server
+=======
+            
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 this.service.get(`api/messagevoices/types`, options).then((res) => {
                 
                     const types = res.data;
@@ -573,7 +672,11 @@ export default class Store {
         }
         this.update()
     }
+<<<<<<< HEAD
     //fecth messagevoice from db 
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     fetchMessageVoice() {
         const userToken =this.getUserTokenId();
         if(userToken){
@@ -582,7 +685,10 @@ export default class Store {
                     authorization: userToken,
                 }
             }
+<<<<<<< HEAD
             //send request 'api/messagevoices/all' to server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             this.service.get(`api/messagevoices/all`, options).then((res) => {
                 const messagevoices = res.data;
                 // console.log("message form db: ", messagevoices);
@@ -605,7 +711,11 @@ export default class Store {
         }
         this.update()
     }
+<<<<<<< HEAD
     //add new message voice default into db
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     addMessageVoiceDefault(data){
         const userToken = this.getUserTokenId();
        
@@ -622,7 +732,11 @@ export default class Store {
                     // {[...Array(product.countInStock).keys()].map( x =>
                     //     <option key={x + 1} value={x + 1}>{x + 1}</option>
                     //     )}
+<<<<<<< HEAD
                     //send request 'api/messagevoices' to server
+=======
+                    
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     this.service.post('api/messagevoices', data, options).then((res) => {
 
                         // console.log("Account Created ", res.data);
@@ -640,26 +754,39 @@ export default class Store {
         })
 
     }
+<<<<<<< HEAD
 
     //function verify user
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     sendVerifyCommunication(info){
         const userToken = this.getUserTokenId();
         const emailObj = {email: info.email}
         if(userToken){
 
             return new Promise((resolve, reject) => {
+<<<<<<< HEAD
                 //send request 'api/users/checkemail' to server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 this.service.post('api/users/checkemail', emailObj).then((res) =>{
                     
                     info.token = res.data;
                     _.unset(info.token, 'user'); 
                     info.user = res.data.user;
+<<<<<<< HEAD
                     // console.log("user is: ", info)
+=======
+                    console.log("user is: ", info)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     const post = {
                         info: info,
                         timestamp: new Date(),
                         }
+<<<<<<< HEAD
                         //send request to email of user
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     axios
                         .post('/ndsapi/require/verifycommunication', post)
                         .then(function(response) {
@@ -688,7 +815,10 @@ export default class Store {
 
     }
 
+<<<<<<< HEAD
     // edit password 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     editPassword(oldPassword, newPassword, ipClient){
 
         const userToken = this.getUserTokenId();
@@ -705,7 +835,10 @@ export default class Store {
 
             return new Promise((resolve, reject) => {
                 // console.log(contents);
+<<<<<<< HEAD
                 //send request 'api/users/editpassword' to server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 this.service.post('api/users/editpassword', contents, options).then((res) => {
                     //soon add code process
                     if(!res.data.success){
@@ -722,7 +855,10 @@ export default class Store {
                         city: ipClient.city,
                     }
                     // console.log(post);
+<<<<<<< HEAD
                     // send to email of user 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     axios
                         .post('/ndsapi/announce/changeinfouser', post)
                         .then(function(response) {
@@ -741,7 +877,10 @@ export default class Store {
         }
     }
 
+<<<<<<< HEAD
     //request change password from user
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     requestChangePassword(email, password, tokenId, ipClient){
         const infoObj = {email: email, password: password}
         const options = {
@@ -753,7 +892,11 @@ export default class Store {
         return new Promise((resolve, reject) => {
             this.service.post('api/users/changepassword', infoObj, options).then((res) =>{
 
+<<<<<<< HEAD
                 // console.log("Changed Password ", res.data);
+=======
+                console.log("Changed Password ", res.data);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
                 const post = {
                     email: email,
@@ -763,7 +906,10 @@ export default class Store {
                     city: ipClient.city,
                 }
                 // console.log(post);
+<<<<<<< HEAD
                   // send to email of user 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 axios
                     .post('/ndsapi/announce/changeinfouser', post)
                     .then(function(response) {
@@ -779,13 +925,20 @@ export default class Store {
         })
     }
 
+<<<<<<< HEAD
     //send request forget password
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     requestGetPassword(email){
         
         const emailObj = {email: email}
         // console.log(emailObj)
         return new Promise((resolve, reject) => {
+<<<<<<< HEAD
             //send request 'api/users/checkemail' to server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             this.service.post('api/users/checkemail', emailObj).then((res) =>{
 
                 // console.log("Account Created ", res.data);
@@ -796,7 +949,10 @@ export default class Store {
                     tokenId: res.data._id,
                 }
                 // console.log(post);
+<<<<<<< HEAD
                 // send to email of user 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 axios
                     .post('/ndsapi/announce/getinfouser', post)
                     .then(function(response) {
@@ -811,9 +967,13 @@ export default class Store {
             });
         })
     }
+<<<<<<< HEAD
     
 
     //upload avatar User
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     uploadUserAvatar(formData){
         const userToken = this.getUserTokenId();
 
@@ -823,7 +983,11 @@ export default class Store {
                     authorization: userToken,
                 }
             }
+<<<<<<< HEAD
             //send request 'api/user/uploadavatar' to server
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             this.service.post('api/user/uploadavatar', formData, options).then((res) => {
 
                 // console.log(res.data.success);
@@ -839,15 +1003,22 @@ export default class Store {
             });
         }
     }
+<<<<<<< HEAD
 
     //function render edit user
     editUser(field, value){
         if(value){
             // console.log(field, value , typeof(value));
+=======
+    editUser(field, value){
+        if(value){
+            console.log(field, value , typeof(value));
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             this.editInfoUser(field, value);
         }
         
     }
+<<<<<<< HEAD
 
     //set theme local store
     setThemeToLocalStorage(isDark = false ){
@@ -858,6 +1029,14 @@ export default class Store {
     }
 
     //get theme t from local store
+=======
+    setThemeToLocalStorage(isDark = false ){
+
+        console.log("Select theme Dark: ", isDark);
+        localStorage.setItem('themeOfChat', isDark);
+       
+    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getThemeFromLocalStorage(){
         // console.log("auto get theme")
         let theme = null;
@@ -875,15 +1054,25 @@ export default class Store {
        
     }
 
+<<<<<<< HEAD
     //upload file type photo or video message
     upLoadfile(formData){
         const userToken = this.getUserTokenId();
         // console.log('File wav get in store: ',formData);
+=======
+    upLoadfile(formData){
+        const userToken = this.getUserTokenId();
+        console.log('File wav get in store: ',formData);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         if(userToken){
 
             this.service.post('api/messages/uploadfiles', formData).then((res) => {
 
+<<<<<<< HEAD
                 // console.log(res.data.success);
+=======
+                console.log(res.data.success);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 if(!res.data.success){
                     console.log(res.data.error)
                 }
@@ -908,8 +1097,11 @@ export default class Store {
             });
         }
     }
+<<<<<<< HEAD
 
     //fetch user channel message
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     fetchUserChannels(){
         const userToken =this.getUserTokenId();
         if(userToken){
@@ -918,7 +1110,10 @@ export default class Store {
                     authorization: userToken,
                 }
             }
+<<<<<<< HEAD
             //send request 'api/me/channels' to server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             this.service.get(`api/me/channels`, options).then((res) => {
                 const channels = res.data;
                 _.each(channels, (c) => {
@@ -933,8 +1128,11 @@ export default class Store {
             })
         }
     }
+<<<<<<< HEAD
 
     //add user to cache temp store
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     addUserToCache(user){
         if(!user.avatar){
             user.avatar = this.loadUserAvatar(user);
@@ -944,19 +1142,28 @@ export default class Store {
         return user;
     }
 
+<<<<<<< HEAD
     //get user id token from temp store
     getUserTokenId(){
         return _.get(this.token, '_id', null);
     }
 
     //add default avatar for user not exist avatar
+=======
+    getUserTokenId(){
+        return _.get(this.token, '_id', null);
+    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     loadUserAvatar(user){
 
             return `useravatars\\default_imgSvg_usernDs.svg`
        
     }
+<<<<<<< HEAD
 
     //search user name with same key word
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     startSearchUsers(q = ""){
         this.search.users = this.search.users.clear();
         //query to backend server and get list of users
@@ -968,8 +1175,11 @@ export default class Store {
         // if(_.trim(search).length){
         //    searchItems = users.filter((user) =>_.get(user, '_id') !== currentUserId && _.includes(_.toLower(_.get(user, 'name')), keyword));
         // }
+<<<<<<< HEAD
         
         //send request to 'api/users/search' server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         this.service.post('api/users/search', data).then((res) => {
             //list off users match
             const users = _.get(res, 'data', []);
@@ -996,7 +1206,11 @@ export default class Store {
         }); 
     }
 
+<<<<<<< HEAD
     //set User Token to local store
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     setUserToken(accessToken){
         if(!accessToken){
             this.localStorage.removeItem('token');
@@ -1006,15 +1220,21 @@ export default class Store {
         this.token = accessToken;
         localStorage.setItem('token', JSON.stringify(accessToken));
     }
+<<<<<<< HEAD
 
     //clear all data stored from cache
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     clearCacheData(){
         this.channels = this.channels.clear();
         this.users = this.users.clear();
         this.messages = this.messages.clear();
     }
+<<<<<<< HEAD
 
     //sign out account 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     signOut(){
 
         const userId = _.toString(_.get(this.user, '_id', null));
@@ -1037,10 +1257,14 @@ export default class Store {
         if(userId){
             this.users = this.users.remove(userId);
         }
+<<<<<<< HEAD
 
         //after logout
         this.clearCacheData()
 
+=======
+        this.clearCacheData();
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         const options = {
             headers : {
                 authorization: tokenId
@@ -1048,12 +1272,18 @@ export default class Store {
         }
         this.service.get('api/user/logout', options);
    
+<<<<<<< HEAD
         this.update()
 
     }
 
 
     //get Token from local store
+=======
+        this.update();
+    }
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getTokenFromLocalStorage(){
         // console.log("get token from local")
         if(this.token){
@@ -1074,7 +1304,10 @@ export default class Store {
         return token;
     }
 
+<<<<<<< HEAD
     //get user from locak store
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getUserFromLocalStorage(){
         // console.log("get user from local")
         let user = null;
@@ -1094,12 +1327,20 @@ export default class Store {
                     authorization: tokenId,
                 }
             }
+<<<<<<< HEAD
             //send request 'api/users/me' to server
+=======
+            
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             this.service.get('api/users/me', options).then((res) => {
                 //user login with token id
                 const accessToken = res.data;
                 const user = _.get(accessToken, 'user');
+<<<<<<< HEAD
                 console.log("here is user ", user)
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 this.setCurrentUser(user);
                 this.setUserToken(accessToken);
 
@@ -1111,7 +1352,11 @@ export default class Store {
          return user;
     }    
         
+<<<<<<< HEAD
     //set current user into local store
+=======
+    
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     setCurrentUser(user){
         if(!user.avatar){
             user.avatar = this.loadUserAvatar(user);
@@ -1128,11 +1373,18 @@ export default class Store {
         this.update();
     }
 
+<<<<<<< HEAD
     //register new account
     register(user){
         const saltRounds = 10;
         //none real this is fake to try hacker
         // console.log(user.password)
+=======
+    register(user){
+        const saltRounds = 10;
+        //none real this is fake to try hacker
+        console.log(user.password)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         const password = bcrypt.hashSync(user.password.content, saltRounds);
         console.log("Email Register is: ", user.email);
         console.log("Password Register is: ", password);
@@ -1141,6 +1393,7 @@ export default class Store {
 
                 // console.log("Account Created ", res.data);
 
+<<<<<<< HEAD
                 // const post = {
                 //     email: user.email,
                 //     name: user.name,
@@ -1150,6 +1403,17 @@ export default class Store {
                 //     .then(function(response) {
                 //         console.log("Successful");
                 //     }).catch(err => console.log(err))
+=======
+                const post = {
+                    email: user.email,
+                    name: user.name,
+                }
+                axios
+                    .post('/ndsapi/announce/welcome', post)
+                    .then(function(response) {
+                        console.log("Successful");
+                    }).catch(err => console.log(err))
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
                 return resolve(res.data);
                 
@@ -1173,6 +1437,7 @@ export default class Store {
             ipClient: ipClient,
         }
 
+<<<<<<< HEAD
         console.log("Logining with: ", user);
         return new Promise((resolve, reject) => {
             
@@ -1183,6 +1448,16 @@ export default class Store {
                 const user = _.get(accessToken, 'user');
                 user.email = email;
                 // console.log("Logining with: ", user);
+=======
+        // console.log("Logining with: ", user);
+        return new Promise((resolve, reject) => {
+
+            this.service.post('api/users/login', user).then((res) => {
+            //     // that mean successful login
+                const accessToken = _.get(res, 'data'); 
+                const user = _.get(accessToken, 'user');
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 this.setCurrentUser(user);
                 this.setUserToken(accessToken);
                 this.realtime.connect();
@@ -1196,11 +1471,16 @@ export default class Store {
 
             }).catch((err) => {
                 // login error
+<<<<<<< HEAD
                 
                 const message = _.get(err, 'response.data.error.message', 'An error require to server, Try again!');
                 console.log("Logining with error is: ", message);
                 return reject(message);
 
+=======
+                const message = _.get(err, 'response.data.error.message', 'An error require, Try again!');
+                return reject(message);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             })
 
         });
@@ -1214,7 +1494,10 @@ export default class Store {
         // });
     }
 
+<<<<<<< HEAD
     //add user to channel prepare for a new channel
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     addUserToChannel(channelId, userId) {
         const channel = this.channels.get(channelId);
         if(channel) {
@@ -1224,8 +1507,11 @@ export default class Store {
         }
       
     }
+<<<<<<< HEAD
 
     //get list search user 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getSearchUsers(){
         // const keyword = _.toLower(search);
 
@@ -1240,7 +1526,10 @@ export default class Store {
         return this.search.users.valueSeq();
     }
 
+<<<<<<< HEAD
     //create new channel
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     onCreateNewChannel(channel = {}){
         const channelId = _.get(channel, "_id");
         this.addChannel(channelId, channel );
@@ -1248,12 +1537,18 @@ export default class Store {
     
     }
 
+<<<<<<< HEAD
     //get current user
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getCurrentUser(){
         return this.user;
     }
 
+<<<<<<< HEAD
     //fetch channel message of current user
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     fetchChannelMessages(channelId){
 
         let channel = this.channels.get(channelId);
@@ -1265,7 +1560,11 @@ export default class Store {
                         authorization: token,
                     }
                 }
+<<<<<<< HEAD
                 //send request 'api/channels/${channelId}/messages' to server 
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 this.service.get(`api/channels/${channelId}/messages`, options).then((res) => {
                     channel.isFetchMessages = true;
 
@@ -1283,26 +1582,40 @@ export default class Store {
             )}
         }   
     
+<<<<<<< HEAD
     
     // connect to socket wss
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     isConnected(){
         return this.realtime.isConnected;
     }
 
+<<<<<<< HEAD
     //set channel is active
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     setActiveChannelId(id) {
         this.activeChannelId = id;
         this.fetchChannelMessages(id);
         this.update();
     }
+<<<<<<< HEAD
 
     //get active channel
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getActiveChannel(){
         const channel = this.activeChannelId ? this.channels.get(this.activeChannelId) : this.channels.first();
         return channel;
     }
+<<<<<<< HEAD
     
     // call function from realtime to fetch message from cache or db
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     setMessage(message, notify = false){
         const id = _.toString(_.get(message, '_id'));
         this.messages = this.messages.set(id, message);
@@ -1336,8 +1649,11 @@ export default class Store {
         }
         this.update();
     }
+<<<<<<< HEAD
 
     //send edit user to realtime
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     editInfoUser(field, value){
         if(value){
 
@@ -1355,7 +1671,10 @@ export default class Store {
     this.update();
     }
 
+<<<<<<< HEAD
     //send status type of user to channel
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     addTyping(channel, typing = false){
         
         if(channel){
@@ -1366,7 +1685,11 @@ export default class Store {
                 payload: typing,
                 typier: userId,
             }
+<<<<<<< HEAD
             // console.log("channel typing: ", channelId);
+=======
+            console.log("channel typing: ", channelId);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             this.realtime.send(
                 {
                     action: 'typing_status',
@@ -1377,8 +1700,11 @@ export default class Store {
         this.update();
     }
 
+<<<<<<< HEAD
 
     //add new message to active channel 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     addMessage(id, message = {}){
 
         const user = this.getCurrentUser();
@@ -1417,6 +1743,7 @@ export default class Store {
         this.update();
     }
 
+<<<<<<< HEAD
     
     //remove user in a channel
     removeMemberFromChannel( channel = null, user = null){
@@ -1530,6 +1857,26 @@ export default class Store {
         let messages = new OrderedMap();
 
         if(channel && channel.members){
+=======
+    removeMemberFromChannel( channel = null, user = null){
+        if(!channel || !user ){
+            return;
+        }
+        const channelId = _.get(channel, '_id')
+        const userId = _.get(user, '_id');
+        channel.members = channel.members.remove(userId);
+        this.channels = this.channels.set(channelId, channel);
+        this.update();
+    }
+
+    getMessages(){
+        return this.messages.valueSeq();
+    }
+    getMessagesFromChannel(channel){
+        let messages = new OrderedMap();
+
+        if(channel){
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             channel.messages.forEach((value, key) => {
 
                 const message = this.messages.get(key);
@@ -1537,16 +1884,25 @@ export default class Store {
     
             });
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         return messages.valueSeq();
         
     }
 
+<<<<<<< HEAD
 
     //get member list from channel
     getMembersFromChannel(channel){
         let members = new OrderedMap();
         if(channel && channel.members){
+=======
+    getMembersFromChannel(channel){
+        let members = new OrderedMap();
+        if(channel){
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             channel.members.forEach((value, key) => {
 
                 const userId = `${key}`
@@ -1563,7 +1919,11 @@ export default class Store {
         return members.valueSeq();
     }
 
+<<<<<<< HEAD
     // add channels
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     addChannel(index, channel = {}){
         this.channels = this.channels.set(`${index}`, channel);
         // console.log(channel);
@@ -1571,14 +1931,20 @@ export default class Store {
         this.update();
     }
 
+<<<<<<< HEAD
     //get channel list
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     getChannels(){
         this.channels = this.channels.sort((a, b) => a.updated - b.updated);
         return this.channels.valueSeq();
     }
+<<<<<<< HEAD
 
 
     //force update store component
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     update(){
         this.app.forceUpdate();
     }

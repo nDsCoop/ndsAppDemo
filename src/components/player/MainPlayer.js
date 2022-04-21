@@ -14,7 +14,11 @@ import youtubeSearch from "../../apis/youtubeSearch";
 import { updatePlayingSong } from "../../external/saveSong";
 
 import { GlobalContext } from "../GlobalState";
+<<<<<<< HEAD
 import _ from 'lodash';
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 import {
   getDownloadedSongs,
 } from "../../external/saveSong";
@@ -26,7 +30,11 @@ let relatedVideosVar;
 
 const MainPlayer = ({ location, history }) => {
   let params = new URLSearchParams(location.search);
+<<<<<<< HEAD
   console.log("path id in mainPlayer: ", params.get("id"));
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   const [{ currentVideoSnippet, themeSelectValue }, dispatch] = useContext(
     GlobalContext
   );
@@ -177,6 +185,7 @@ const MainPlayer = ({ location, history }) => {
             maxResults: 20
           }
         });
+<<<<<<< HEAD
 
         //proccess fail by result turn back
 
@@ -188,6 +197,9 @@ const MainPlayer = ({ location, history }) => {
 
         setRelatedVideos(_.tail(res.data.items));
 
+=======
+        setRelatedVideos(res.data.items);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       };
 
       // if its not from the mini next button then only change history
@@ -196,14 +208,24 @@ const MainPlayer = ({ location, history }) => {
         if (!isItFromPlaylist) {
           // console.log("searching for related vids", relatedVideos);
           // if player is in playlist mode we will just replace history else push it
+<<<<<<< HEAD
           if (location.pathname !== "/ndsweb/music") {
             // prevent duplicating history
             history.push(`/ndsweb/music/play?id=${currentVideoSnippet.id}`);
+=======
+          if (location.pathname !== "/play") {
+            // prevent duplicating history
+            history.push(`/play?id=${currentVideoSnippet.id}`);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           }
 
           searchRelated();
         } else {
+<<<<<<< HEAD
           history.replace(`/ndsweb/music/play?id=${currentVideoSnippet.id}`);
+=======
+          history.replace(`/play?id=${currentVideoSnippet.id}`);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           setIsItFromPlaylist(false);
         }
       }
@@ -329,9 +351,20 @@ const MainPlayer = ({ location, history }) => {
         setVideoSnippet(video);
       } 
       
+<<<<<<< HEAD
     }
     
 
+=======
+
+    }
+    
+
+
+    
+
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   };
 
   const playPrevious = () => {
@@ -414,7 +447,11 @@ const MainPlayer = ({ location, history }) => {
       setPlayerState("maximized");
       setMinimized(true);
       history.push({
+<<<<<<< HEAD
         pathname: "/ndsweb/music/play",
+=======
+        pathname: "/play",
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         search: `?id=${currentVideoSnippet.id}`,
         state: { modal: true }
       });
@@ -504,15 +541,21 @@ const MainPlayer = ({ location, history }) => {
   });
 
   useEffect(() => {
+<<<<<<< HEAD
  
     if (location.pathname === "/ndsweb/music/play" && !currentVideoSnippet.id) {
       console.log("history is in play fetching song times 2");
+=======
+    if (location.pathname === "/play" && !currentVideoSnippet.id) {
+      console.log("history is in play fetching song");
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
       fetchAndSetCurrentVideoSnippet(params.get("id")); // math will give the song id from
     }
     // we will only change if its push  otherwise while changing song from playlist changes the state
 
     // Listen for changes to the current location.
+<<<<<<< HEAD
 
     const unlisten = history.listen(location => {
       // location is an object like window.location
@@ -530,6 +573,22 @@ const MainPlayer = ({ location, history }) => {
       }
       console.log(history);
     });
+=======
+    // const unlisten = history.listen(location => {
+    //   // location is an object like window.location
+    //   if (location.pathname === "/play") {
+    //     // we will only change if its push  otherwise while changing song from playlist changes the state
+    //     if (history.action !== "REPLACE") {
+    //       setPlayerState("maximized");
+    //       console.log("set player state to maximized");
+    //     }
+    //   } else {
+    //     setPlayerState("minimized");
+    //     console.log("set player state to minimized");
+    //   }
+    //   console.log(history);
+    // });
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   }, [history]);
 
   useEffect(() => {

@@ -33,7 +33,11 @@ const LoginPage = ({ continueToHome }) => {
       alignItems="center"
     > {showSignIn()}
         <Banner title="nDsMusic" subtitle="Enjoyable Music Experience Without ads">
+<<<<<<< HEAD
         <Link to={"/ndsweb/music/home"} className="btn-primary" onClick={continueToHome}>
+=======
+        <Link to={"/page1/home"} className="btn-primary" onClick={continueToHome}>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           Continue
         </Link>
         

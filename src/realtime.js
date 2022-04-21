@@ -11,7 +11,10 @@ export default class Realtime{
         this.reconnect();
 
     }
+<<<<<<< HEAD
     // reconnect with server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     reconnect(){
         const store = this.store;
         window.setInterval(() => {
@@ -21,8 +24,11 @@ export default class Realtime{
             }
         }, 3000)
     }
+<<<<<<< HEAD
 
     //decode message recieve from server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     decoMessage(msg){
         let message = {};
         try{
@@ -33,8 +39,11 @@ export default class Realtime{
         }
         return message;
     }
+<<<<<<< HEAD
 
     // process message after decode
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     readMessage(msg){
         const store = this.store;
         const currentUser = store.getCurrentUser();
@@ -44,6 +53,7 @@ export default class Realtime{
         const payload = _.get(message, 'payload');
 
         switch(action){
+<<<<<<< HEAD
             case 'channel_member_update':
                 //to do check payload and insert new channel
                 const userId_remove = _.get(payload, 'userId');
@@ -53,6 +63,8 @@ export default class Realtime{
                 this.updateMemberChannel(channel, userId_remove);
               
                 break;
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             case 'edit_user' :
                 const userId = _.get(payload, 'userId');
                 const value = _.get(payload, 'obj.payload', '');
@@ -60,7 +72,11 @@ export default class Realtime{
                 this.updateInfoUser(userId, field, value);
                 break;
             case 'typing_status':
+<<<<<<< HEAD
                 // console.log(payload);
+=======
+                console.log(payload);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 const obj = _.get(payload, 'obj');
                 const channelId =  _.get(obj, 'channelId');
                 let typing = _.get(obj, 'payload');
@@ -90,6 +106,7 @@ export default class Realtime{
                 break;
         }
     }
+<<<<<<< HEAD
 
     //update member in channel
     updateMemberChannel(channel, userId_remove){
@@ -101,6 +118,8 @@ export default class Realtime{
     
 
     //update info user
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     updateInfoUser(userId, field, value){
         const store = this.store;
         // const currentUser = store.getCurrentUser();
@@ -139,12 +158,18 @@ export default class Realtime{
             }
             return user;
         });
+<<<<<<< HEAD
        
        store.update()
 
     }
 
     //send status typing of user
+=======
+        store.update();
+
+    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     onUpdateTypestatus(channelId, isTyping = false, typier){
         const store = this.store;
         store.channels = store.channels.update(channelId, (channel) => {
@@ -157,7 +182,10 @@ export default class Realtime{
         store.update();
     }
 
+<<<<<<< HEAD
     //update status user online or offline
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     onUpdateUserStatus(userId, isOnline = false){
         const store = this.store;
     
@@ -173,7 +201,10 @@ export default class Realtime{
         
     }
 
+<<<<<<< HEAD
     //add message to cache store
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     onAddMessage(payload, notify = false){
         let user = _.get(payload, 'user');
         const store = this.store;
@@ -198,7 +229,10 @@ export default class Realtime{
 
     }
 
+<<<<<<< HEAD
     //add channnel to cache
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     onAddChannel(payload){
         const store = this.store;
         const channelId = `${payload._id}`;
@@ -229,8 +263,11 @@ export default class Realtime{
         })
         store.addChannel(channelId, channel);
     }
+<<<<<<< HEAD
 
     //send message to server
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     send( msg = {}){
         try{
             const isConnected = this.isConnected;
@@ -244,7 +281,10 @@ export default class Realtime{
         }
        
     }
+<<<<<<< HEAD
     //send request authentication user with token
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     authentication(){
         const store = this.store;
         const tokenId = store.getUserTokenId();
@@ -254,11 +294,18 @@ export default class Realtime{
         }
             this.send(message);
     }
+<<<<<<< HEAD
     //main connect
     connect(){
         try{
             // const ws = new WebSocket('ws://localhost:8080');
             const ws = new WebSocket('wss://ndschatserver.herokuapp.com');
+=======
+
+    connect(){
+        try{
+            const ws = new WebSocket('ws://localhost:8080');
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             this.ws = ws;
             ws.onopen = () => {
                 //tell to server who are you ?
@@ -267,7 +314,11 @@ export default class Realtime{
                 
                 ws.onmessage = (e) => {
                     this.readMessage(_.get(e, 'data',''));
+<<<<<<< HEAD
                     console.log("Message from server");
+=======
+                    console.log("Message from server: ", e.data);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 }
             }
     
@@ -285,5 +336,10 @@ export default class Realtime{
             console.log("An error when Connecting to Server!")
         }
 
+<<<<<<< HEAD
+=======
+       
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     }
 }

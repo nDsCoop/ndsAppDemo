@@ -54,12 +54,21 @@ const NotificationProvider = (props) => {
             }
             
     }
+<<<<<<< HEAD
     React.useEffect(() => {
         // console.log(props.state)
         if(props.state){
             handleAddNotification()
         }
     }, [props.state])
+=======
+React.useEffect(() => {
+    // console.log(props.state)
+    if(props.state){
+        handleAddNotification()
+    }
+}, [props.state])
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
   
    

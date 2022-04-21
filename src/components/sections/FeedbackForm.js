@@ -85,7 +85,11 @@ const FeedbackForm = () => {
     >
       <div className="form-section-music">
       <Typography variant="h5" gutterBottom={true}>
+<<<<<<< HEAD
         The current page has been changed to the Feedback in About page, sorry for this disconvenience
+=======
+        The current page has been changed to the FeedbackApp page, click <a href="/about/feedback">here</a> to continue{" "}
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       </Typography>
       </div>
       {/* <SnackbarMessage />

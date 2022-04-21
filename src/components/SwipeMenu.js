@@ -107,32 +107,52 @@ const SwipeMenu = () => {
           className={"pinkLists"}
           onClick={() => setMenuOpen(false)}
         >
+<<<<<<< HEAD
           <ListItem button component={Link} to="/ndsweb/music/settings">
+=======
+          <ListItem button component={Link} to="/page1/settings">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             <ListItemIcon>
               <Settings />
             </ListItemIcon>
             <ListItemText primary="Settings" />
           </ListItem>
+<<<<<<< HEAD
           <ListItem button component={Link} to="/ndsweb/music/feedback">
+=======
+          <ListItem button component={Link} to="/page1/feedback">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             <ListItemIcon>
               <Feedback />
             </ListItemIcon>
             <ListItemText primary="Feedback" />
           </ListItem>
+<<<<<<< HEAD
           <ListItem button component={Link} to="/ndsweb/music/help">
+=======
+          <ListItem button component={Link} to="/page1/help">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             <ListItemIcon>
               <HelpOutline />
             </ListItemIcon>
             <ListItemText primary="Help & Support" />
           </ListItem>
+<<<<<<< HEAD
           <ListItem button component={Link} to="/ndsweb/music/contributors">
+=======
+          <ListItem button component={Link} to="/page1/contributors">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             <ListItemIcon>
               <People />
             </ListItemIcon>
             <ListItemText primary="Contributors" />
           </ListItem>
        
+<<<<<<< HEAD
           <ListItem button component={Link} to="/ndsweb/music/privacy">
+=======
+          <ListItem button component={Link} to="/page1/privacy">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             <ListItemIcon>
               <Info />
             </ListItemIcon>

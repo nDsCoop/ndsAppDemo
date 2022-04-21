@@ -139,10 +139,17 @@ export const GreetingApp4 = (props) => {
         handleCreateR()
         let url = window.location.pathname;
 
+<<<<<<< HEAD
         console.log(url)
 
         if(url === '/ndsappbeta/weather/greeting/newuser&account'){
             setUrl('ndsappbeta/weather/newaccount#')
+=======
+        // console.log(url)
+
+        if(url === '/page2/greeting/newuser&account'){
+            setUrl('page2/newaccount#')
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         } else {
             setUrl('page4/newaccount#')
         }
@@ -160,7 +167,11 @@ export const GreetingApp4 = (props) => {
     }
     if(isContinue === 2) {
         // window.location.replace('http://localhost:3000/page3/quickaccount/login#'+{email}&{ID})
+<<<<<<< HEAD
         return (<Redirect to={`/ndsappbeta/chat/login/newaccount#${email}&${ID}+${ipClient.country}+${ipClient.city}+${ipClient.ip}`} />)
+=======
+        return (<Redirect to={`/page3/login/newaccount#${email}&${ID}+${ipClient.country}+${ipClient.city}+${ipClient.ip}`} />)
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     }
 
     const render = () => (

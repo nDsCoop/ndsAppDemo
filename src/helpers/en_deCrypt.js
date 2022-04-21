@@ -12,7 +12,11 @@ export const encrypt = (text) => {
 
         const salt = CryptoJS.lib.WordArray.random(128 / 8)
         const iv = CryptoJS.lib.WordArray.random(128 / 8)
+<<<<<<< HEAD
         const encrypted = CryptoJS.AES.encrypt(text, CryptoJS.PBKDF2(keySecret, salt, { keySize: 256 / 32, iterations: 100 }) /* key */, { iv: iv, padding: CryptoJS.pad.Pkcs7, mode: CryptoJS.mode.CFB })
+=======
+        const encrypted = CryptoJS.AES.encrypt(text, CryptoJS.PBKDF2(keySecret, salt, { keySize: 256 / 32, iterations: 100 }) /* key */, { iv: iv, padding: CryptoJS.pad.Pkcs7, mode: CryptoJS.mode.CBC })
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         const transitmessage = salt.toString() + iv.toString() + encrypted.toString();
         return transitmessage;
 
@@ -28,7 +32,11 @@ export const decrypt = (text) => {
     try{
 
         const key = CryptoJS.PBKDF2(keySecret, CryptoJS.enc.Hex.parse(text.substr(0, 32)) /* Salt */, { keySize: 256 / 32, iterations: 100 })
+<<<<<<< HEAD
         const decrypted = CryptoJS.AES.decrypt(text.substring(64) /* encrypted */, key, { iv: CryptoJS.enc.Hex.parse(text.substr(32, 32)) /* iv */, padding: CryptoJS.pad.Pkcs7, mode: CryptoJS.mode. CryptoJS.mode.CFB })
+=======
+        const decrypted = CryptoJS.AES.decrypt(text.substring(64) /* encrypted */, key, { iv: CryptoJS.enc.Hex.parse(text.substr(32, 32)) /* iv */, padding: CryptoJS.pad.Pkcs7, mode: CryptoJS.mode.CBC })
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         return decrypted.toString(CryptoJS.enc.Utf8)
 
     }

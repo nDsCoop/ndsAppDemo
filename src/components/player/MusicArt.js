@@ -106,7 +106,10 @@ const MusicArt = ({ data, rating, audioEl }) => {
   return (
     <Grid
       container
+<<<<<<< HEAD
       className="container-playerMusic"
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       direction="column"
       justify="center"
       alignItems="center"
@@ -120,7 +123,11 @@ const MusicArt = ({ data, rating, audioEl }) => {
       }}
     >
       <motion.div
+<<<<<<< HEAD
         className="box-searchThumb"
+=======
+        className="box"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         drag
         dragElastic={true}
         dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}

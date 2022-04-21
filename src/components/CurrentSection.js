@@ -64,8 +64,12 @@ const CustomTab = withStyles({
     bottom: "0",
     padding: 0,
     width: "100%",
+<<<<<<< HEAD
     zIndex: 1300,
     overflow: "hidden"
+=======
+    zIndex: 1300
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   },
   indicator: {
     display: "none"
@@ -173,11 +177,17 @@ const CurrentSection = ({ history, location }) => {
       setRedirectState(true);
     }
     // if this is not a new user redirect it to home
+<<<<<<< HEAD
 
     
     previousLocation = location;
     history.listen(location => {
       if (location.pathname !== "/ndsweb/music/play" && location.pathname !== "*") {
+=======
+    previousLocation = location;
+    history.listen(location => {
+      if (location.pathname !== "/play") {
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         previousLocation = location;
         console.log(previousLocation);
       }
@@ -186,16 +196,25 @@ const CurrentSection = ({ history, location }) => {
 
   useEffect(() => {
     // we will redirect everytime user comes to root page
+<<<<<<< HEAD
     if (redirectState && history.location.pathname === "*") {
       history.replace("/ndsweb/music");
+=======
+    if (redirectState && history.location.pathname === "/") {
+      history.replace("/home");
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     }
 
     // if the location is not play then we will push new location
   }, [setRedirectState, history, redirectState]);
 
   const checkPrevLocation = () => {
+<<<<<<< HEAD
     console.log("path checkPrevLocation: ", location.pathname);
     if (location.pathname === "/ndsweb/music/play") {
+=======
+    if (location.pathname === "/play") {
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       return previousLocation;
     } else {
       return location;
@@ -205,7 +224,11 @@ const CurrentSection = ({ history, location }) => {
   // we will load the homepage with all the playlists
   const continueToHome = () => {
     localStorage.setItem("isThisNew", "no");
+<<<<<<< HEAD
     history.replace("/ndsweb/music");
+=======
+    history.replace("/");
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
     if (deferredPrompt) {
       // show the prompt to install app
@@ -225,7 +248,11 @@ const CurrentSection = ({ history, location }) => {
   const returnMainPlayer = props => {
     // we will return the main player if the path is not the "/"
 
+<<<<<<< HEAD
     if (window.location.pathname !== "/ndsweb/music") {
+=======
+    if (window.location.pathname !== "/") {
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       return <MainPlayer {...props} />;
     } else {
       return null;
@@ -240,21 +267,38 @@ const CurrentSection = ({ history, location }) => {
         <Switch location={checkPrevLocation()}>
           <Route
             exact
+<<<<<<< HEAD
             path="/ndsweb/music"
+=======
+            path="/page1"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             render={props => {
               return <LoginPage continueToHome={continueToHome} />;
             }}
           />
+<<<<<<< HEAD
         
           <Route
             path="/ndsweb/music/home"
+=======
+          <Route
+            path="/search"
+            render={props => <SearchResult videos={searchResult} />}
+          />
+          <Route
+            path="/page1/home"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             render={props => {
               setTabValue(0);
               return <HomePage />;
             }}
           />
           <Route
+<<<<<<< HEAD
             path="/ndsweb/music/liked"
+=======
+            path="/page1/liked"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             render={props => {
               setTabValue(1);
               return (
@@ -267,7 +311,11 @@ const CurrentSection = ({ history, location }) => {
             }}
           />
           <Route
+<<<<<<< HEAD
             path="/ndsweb/music/downloads"
+=======
+            path="/page1/downloads"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             render={props => {
               setTabValue(2);
               return (
@@ -279,7 +327,11 @@ const CurrentSection = ({ history, location }) => {
             }}
           />
           <Route
+<<<<<<< HEAD
             path="/ndsweb/music/history"
+=======
+            path="/page1/history"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             render={props => {
               setTabValue(3);
               return (
@@ -290,6 +342,7 @@ const CurrentSection = ({ history, location }) => {
               );
             }}
           />
+<<<<<<< HEAD
           
           <Route
             path="/search"
@@ -323,6 +376,30 @@ const CurrentSection = ({ history, location }) => {
         <div style={{ height: currentVideoSnippet.id ? "100px" : "50px" }} />
       </Suspense>
       
+=======
+          <Route
+            path="/page1/app"
+            render={props => {
+              window.location.replace(
+                "/"
+              );
+              return <div>Redirecting you to play store</div>;
+            }}
+          />
+
+          <Route path="/page1/settings" component={SettingsPage} />
+          <Route path="/page1/privacy" component={PrivacyPage} />
+
+          <Route path="/page1/feedback" component={FeedbackForm} />
+          <Route path="/page1/help" component={DonatePage} />
+          <Route path="/page1/contributors" component={ContributorsPage} />
+          <Route component={Errors} />
+        </Switch>
+        <Route path="/" render={props => returnMainPlayer(props)} />
+
+        <div style={{ height: currentVideoSnippet.id ? "100px" : "50px" }} />
+      </Suspense>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
       {/* if the player is on then return 100px else 50px*/}
       <CustomTab
         value={tabValue}
@@ -335,7 +412,11 @@ const CurrentSection = ({ history, location }) => {
           icon={<Home />}
           aria-label="Home"
           component={Link}
+<<<<<<< HEAD
           to="/ndsweb/music/home"
+=======
+          to="/page1/home"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           label="Home"
         />
 
@@ -343,7 +424,11 @@ const CurrentSection = ({ history, location }) => {
           icon={<Favorite />}
           aria-label="Liked"
           component={Link}
+<<<<<<< HEAD
           to="/ndsweb/music/liked"
+=======
+          to="/page1/liked"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           label="Liked"
         />
 
@@ -351,14 +436,22 @@ const CurrentSection = ({ history, location }) => {
           icon={<GetApp />}
           aria-label="Downloads"
           component={Link}
+<<<<<<< HEAD
           to="/ndsweb/music/downloads"
+=======
+          to="/page1/downloads"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           label="Downloads"
         />
         <CustomTabs
           icon={<History />}
           aria-label="History"
           component={Link}
+<<<<<<< HEAD
           to="/ndsweb/music/history"
+=======
+          to="/page1/history"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           label="History"
         />
       </CustomTab>

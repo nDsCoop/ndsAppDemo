@@ -15,7 +15,11 @@ class Error extends Component {
  				<Hero>
 
 					<Helmet>
+<<<<<<< HEAD
 						<title>Error | nDsWeb</title>
+=======
+						<title>Error | nDsBuilding</title>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 					</Helmet>
 					<div className="loading-error-url">
 						<LoadingMini />

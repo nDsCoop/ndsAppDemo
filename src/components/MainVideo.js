@@ -45,7 +45,11 @@ export class MainVideo extends Component {
       }
   
       // DONT FORGET TO CHANGE TO YOUR URL
+<<<<<<< HEAD
       this.serviceIP = 'https://ndsbirthdayserver.herokuapp.com/webrtcPeer'
+=======
+      this.serviceIP = 'http://localhost:9150/webrtcPeer'
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   
       // https://reactjs.org/docs/refs-and-the-dom.html
       // this.localVideoref = React.createRef()
@@ -522,7 +526,11 @@ export class MainVideo extends Component {
       
       if(!me){
         return (
+<<<<<<< HEAD
           <Redirect to="/ndsweb/chat" />
+=======
+          <Redirect to="/page3" />
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         )
       } 
       if (disconnected) {
@@ -539,7 +547,11 @@ export class MainVideo extends Component {
 
         // setTimeout(() => {
           return (
+<<<<<<< HEAD
             <Redirect to="/ndsweb/chat" />
+=======
+            <Redirect to="/page3" />
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           ) 
           // }, 10000);
         

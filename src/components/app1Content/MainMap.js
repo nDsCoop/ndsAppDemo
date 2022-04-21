@@ -5,6 +5,10 @@ import { Map as LeafletMap, TileLayer, Circle, Popup} from 'react-leaflet';
 // const numeral = require('numeral');
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 export default function MapCv({center, zoom, marks, allMark }) {
 
     // const casesTypeColors = {
@@ -21,6 +25,12 @@ export default function MapCv({center, zoom, marks, allMark }) {
     //         multiplier: 800,
     //     }
     // }
+<<<<<<< HEAD
+=======
+   
+
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
     const showDataOnMap = (marks) => 
         marks.map((mark) => (

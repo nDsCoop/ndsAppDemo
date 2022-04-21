@@ -122,7 +122,11 @@ function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function(resolve, reject) {
     var xhr = new XMLHttpRequest();
+<<<<<<< HEAD
     xhr.open("GET", "https://ndsbirthdayserver.herokuapp.com/proxy/" + URL);
+=======
+    xhr.open("GET", "http://localhost:9150/proxy/" + URL);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     xhr.responseType = "blob";
     xhr.onload = function() {
       var status = xhr.status;
@@ -138,7 +142,11 @@ function fetchProxiedBlob(url) {
     xhr.send();
     setTimeout(() => {
       xhr.abort();
+<<<<<<< HEAD
       xhr.open("GET", "https://ndsbirthdayserver.herokuapp.com/proxy/" + URL);
+=======
+      xhr.open("GET", "http://localhost:9150/proxy/" + URL);
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
       xhr.send();
     }, 1000);

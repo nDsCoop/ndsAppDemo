@@ -22,11 +22,20 @@ const Home = () => {
 	 	return (
 	 	<>
 		 <Helmet>
+<<<<<<< HEAD
 			<title>Home | nDsWeb</title>
 		</Helmet>
 				
 		<Hero>
 			<Banner title="Welcome to nDs-Website" subtitle="Any Changes Should Start with Yourself">
+=======
+			<title>Home | nDsBuilding</title>
+		</Helmet>
+				
+		<Hero>
+			<Banner title="Welcome to nDsApp" subtitle="
+				Interesting Experience Right Now">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 			<Wrapper>
 				<Divider className="divider"/>
 				{isUser && user.picture &&  <img src={user.picture} alt={user.name} />}

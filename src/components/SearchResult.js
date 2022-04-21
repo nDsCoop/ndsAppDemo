@@ -1,6 +1,10 @@
 import React, { useContext } from "react";
 import { motion, useCycle } from "framer-motion";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+// import { Link } from "react-router-dom";
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
 import { GlobalContext } from "./GlobalState";
 
@@ -29,7 +33,11 @@ const liVariants = {
   },
   closed: {
     y: 50,
+<<<<<<< HEAD
     opacity: 1,
+=======
+    opacity: 0,
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     transition: {
       y: { stiffness: 1000 }
     }
@@ -81,7 +89,11 @@ const SearchResult = ({ videos }) => {
           button
           onClick={() => handleClick(video)}
           // component={Link}
+<<<<<<< HEAD
           to={{pathname: "/ndsweb/music/play", search:`?id=${video.id.videoId}`}}
+=======
+          // to={{pathname: "/play", search:`?id=${video.id.videoId}`}}
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         >
           <ListItemAvatar>
             <Avatar

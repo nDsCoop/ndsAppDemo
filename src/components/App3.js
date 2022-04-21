@@ -6,6 +6,7 @@ import { OrderedMap } from 'immutable';
 import _ from 'lodash';
 import {ObjectID} from "../helpers/objectid";
 import { IconButton } from '@material-ui/core';
+<<<<<<< HEAD
 import { IoMdListBox, IoMdPeople } from 'react-icons/io'
 import { CgCloseO, CgSoftwareUpload, CgMoreVerticalAlt } from 'react-icons/cg'
 import { SiConvertio } from 'react-icons/si';
@@ -16,6 +17,13 @@ import { MdDeleteForever, MdInsertEmoticon, MdMic, MdVideocam, MdNavigateNext, M
 // import moment from 'moment';
 
 import Tooltip from '@material-ui/core/Tooltip';
+=======
+import { CgCloseO, CgSoftwareUpload, CgMoreVerticalAlt } from 'react-icons/cg'
+import { SiConvertio } from 'react-icons/si';
+import { FaSun, FaMoon } from 'react-icons/fa';
+import { MdSettings, MdDeleteForever, MdInsertEmoticon, MdMic, MdVideocam, MdNavigateNext, MdPlayCircleOutline } from 'react-icons/md';
+// import moment from 'moment';
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 import Moment from 'react-moment';
 import { UserBar } from "./UserBar";
 import Loading from './Loading';
@@ -26,12 +34,18 @@ import AudioAnalyser from './library/AudioAnalyser';
 import Draggable from './Draggable';
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
 
+<<<<<<< HEAD
 const urlServer = 'https://ndschatserver.herokuapp.com';
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
 export default class App3 extends Component {
     constructor(props){
         super(props);
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         this.state = {
             height: window.innerHeight,
             newMessage: '',
@@ -49,6 +63,7 @@ export default class App3 extends Component {
             idRoomChat: '',
             redirect: false,
             isDark: true,
+<<<<<<< HEAD
             isBarRight: false,
             isBarLeft: false,
             isRedirect: false,
@@ -59,6 +74,11 @@ export default class App3 extends Component {
     redirectPageHelp = () => {
         this.setState({isRedirect: true})
     }
+=======
+        }
+
+    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     
     updateTheme = (theme) => {
       
@@ -101,19 +121,30 @@ export default class App3 extends Component {
         return Math.floor(Math.random() * Math.floor(max));
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     handleCreateR = (e) => {
         e.preventDefault();
             const idRoomChat = this.generateId(24);
             this.setState({idRoomChat: idRoomChat});
             console.log(idRoomChat);
+<<<<<<< HEAD
     }
 
+=======
+      }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     dec2hex = (dec) => {
         return dec < 10
         ? '0' + _.toString(dec)
         : dec.toString(16)
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     generateId = (len) => {
         var arr = new Uint8Array((len || 40) / 2)
         window.crypto.getRandomValues(arr)
@@ -184,13 +215,18 @@ export default class App3 extends Component {
         
     //stop
     stopRecording() {
+<<<<<<< HEAD
     if(this.state.audio !== null){
+=======
+       if(this.state.audio !== null){
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             this.state.audio.getTracks().forEach(track => track.stop());
             this.setState({ audio: null });
             this.setState({ record: false }); 
         } else {
             console.log("Error shortage-lenght!");
         }
+<<<<<<< HEAD
                 
     }
 
@@ -242,11 +278,50 @@ export default class App3 extends Component {
 
         }
     }
+=======
+               
+        
+    }
+
+
+        
+        onClickOutSide = (e) => {
+            if(this.ref && !this.ref.contains(e.target)){
+                // console.log("Here click out side login form!");
+                this.setState({
+                    showEmoji: false,
+                })
+            }
+        }
+
+        onDrop = (files) => {
+            const {store} = this.props;
+            // console.log("file goc: ",files);
+            let formData = new FormData();
+            formData.append("file", files[0]);
+            store.upLoadfile(formData);
+            // console.log("file format: ",formData);
+        }
+
+
+        sendTyping = () =>{
+            const { store } = this.props;
+            const activeChannel = store.getActiveChannel();
+            this.lastUpdateTime = Date.now()
+            if(!this.state.isTyping){
+                this.setState({isTyping:true});
+                store.addTyping(activeChannel, true);
+                this.startCheckingTyping();
+
+            }
+        }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
 	/*
 	*	startCheckingTyping
 	*	Start an interval that checks if the user is typing.
 	*/
+<<<<<<< HEAD
     startCheckingTyping = ()=>{
         console.log("Typing");
         this.typingInterval = setInterval(() => {
@@ -256,10 +331,22 @@ export default class App3 extends Component {
             }
         }, 300)
     }
+=======
+        startCheckingTyping = ()=>{
+            console.log("Typing");
+            this.typingInterval = setInterval(() => {
+                if((Date.now() - this.lastUpdateTime) > 350){
+                    this.setState({isTyping:false})
+                    this.stopCheckingTyping()
+                }
+            }, 300)
+        }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 	/*
 	*	stopCheckingTyping
 	*	Start the interval from checking if the user is typing.
 	*/
+<<<<<<< HEAD
     stopCheckingTyping = () => {
         const { store } = this.props;
         const activeChannel = store.getActiveChannel();
@@ -270,6 +357,19 @@ export default class App3 extends Component {
         // console.log(this.state.isTyping);
         }
     }
+=======
+        stopCheckingTyping = () => {
+            const { store } = this.props;
+            const activeChannel = store.getActiveChannel();
+            console.log("Stop Typing");
+            if(this.typingInterval){
+                clearInterval(this.typingInterval)
+                store.addTyping(activeChannel, false);
+            // console.log(this.state.isTyping);
+            }
+        }
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
     renderChannelAvatar(channel){
         const {store} = this.props;
@@ -281,7 +381,11 @@ export default class App3 extends Component {
 
         const avatars = members.map((user, index) => {
 
+<<<<<<< HEAD
             return index < maxDisplay ?  <img key={index} src={`${urlServer}/${_.get(user, 'avatar')}` || defaultUserImg} alt={_.get(user, 'name')} /> : null
+=======
+            return index < maxDisplay ?  <img key={index} src={`http://localhost:8080/${_.get(user, 'avatar')}` || defaultUserImg} alt={_.get(user, 'name')} /> : null
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
         });
 
@@ -301,7 +405,11 @@ export default class App3 extends Component {
          if(!title && _.get(channel, 'isNew')){
              title = 'New Mss';
          }
+<<<<<<< HEAD
         return <div className="title-name-channel">{title}</div>
+=======
+        return <h4>{title}</h4>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     }
    
     handleOnClick = (user) => {
@@ -314,7 +422,10 @@ export default class App3 extends Component {
             searchUser: '',
         })
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     _onCreateChannel = (e) => {
         e.preventDefault()
         const { store } =this.props;
@@ -335,13 +446,20 @@ export default class App3 extends Component {
         channel.members = channel.members.set(currentUserId, true);
         store.onCreateNewChannel(channel);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     scrollMessagesToBottom = () => {
         if(this.messagesRef){
             this.messagesRef.scrollTop = this.messagesRef.scrollHeight;
         }
     }
  
+<<<<<<< HEAD
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     handlePlayMusic = (music) => {
        
         try {
@@ -358,11 +476,18 @@ export default class App3 extends Component {
     }
 
 
+<<<<<<< HEAD
     // handleStopMusic = (music) => {
     //     this.audio = new Audio(music);
     //     this.audio.pause()
     // }
 
+=======
+    handleStopMusic = (music) => {
+        this.audio = new Audio(music);
+        this.audio.pause()
+    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     handleSubmit = (e) => {
 
         const { newMessage } = this.state;
@@ -437,38 +562,57 @@ export default class App3 extends Component {
     //     }
 
     // }
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     componentDidUpdate(){
         this.scrollMessagesToBottom();
         // console.log(this.state.isDark)
         // console.log("CDidUpdate");
        
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     componentDidMount(){
         const { store } = this.props;
         window.addEventListener('resize', this._onResi);
         window.addEventListener('mousedown', this.onClickOutSide);
+<<<<<<< HEAD
         window.addEventListener('mousedown', this.onClickOutSide1);
         window.addEventListener('mousedown', this.onClickOutSide2);
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         const theme = store.getThemeFromLocalStorage();
         this.updateTheme(theme);
         // this.addTestMessages();
         // console.log("CDidMount");
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     componentWillUnmount(){
         this.stopCheckingTyping()
         window.removeEventListener('resize', this._onResi);
         window.removeEventListener('mousedown', this.onClickOutSide);
+<<<<<<< HEAD
         window.removeEventListener('mousedown', this.onClickOutSide1);
         window.removeEventListener('mousedown', this.onClickOutSide2);
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         // console.log("CWillUnMount");
     }
     
     render() {
 
+<<<<<<< HEAD
         const { height, newMessage, showEmoji, isShowGetAud, openToolChat, English, iShowConfig, redirect, isDark, isBarLeft, isBarRight } = this.state;
+=======
+        const { height, newMessage, showEmoji, isShowGetAud, openToolChat, English, iShowConfig, redirect, isDark } = this.state;
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         const { store } = this.props;
         const isConnected = store.isConnected();
         const activeChannel = store.getActiveChannel();
@@ -484,6 +628,10 @@ export default class App3 extends Component {
             // console.log(`${emojiObject.emoji}`);
         }
        
+<<<<<<< HEAD
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         const style = {
             height: height,
         }
@@ -495,7 +643,11 @@ export default class App3 extends Component {
                         <div className="user-list">
                         {usersList.map((user, index) =>{
                             return <div onClick={() => this.handleOnClick(user)} key={index} className="user">
+<<<<<<< HEAD
                             <img src={`${urlServer}/${user.avatar}` || defaultUserImg} alt={user.name} />
+=======
+                            <img src={`http://localhost:8080/${user.avatar}` || defaultUserImg} alt={user.name} />
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             <span>{user.name}</span>
                         </div>
                         })
@@ -505,12 +657,17 @@ export default class App3 extends Component {
                 )
         }
         if(redirect){
+<<<<<<< HEAD
             return <Redirect to={"/ndsappbeta/chat/Facemoment/" 
+=======
+            return <Redirect to={"/page3/Facemoment/" 
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             + this.state.idRoomChat
             + '?' + _.get(me, '_id') + this.getRandomInt(9)
         }/>
         }
 
+<<<<<<< HEAD
         if(this.state.isRedirect){
             return <Redirect to={"/ndsappbeta/about/help"} />
         }
@@ -556,11 +713,41 @@ export default class App3 extends Component {
 
                     {resultSearch()}
                     </div> : null }
+=======
+        return (
+
+            <div style={style} className="app3">
+               <div className={className('chat-header', {'darkTheme': !isDark})}>
+                    <div className="header-left">
+                        <div className="action">
+                            <Link to='' onClick={(e) => this._onCreateChannel(e)} className="btn-primary">AddNew</Link>
+                        </div>
+                    </div>
+                    {_.get(activeChannel, 'isNew') ? <div className="toolbar">
+                        <form className="tool">
+                            <textarea
+                            type="text"
+                            value ={ this.state.searchUser }
+                            placeholder="Name/ID/Email"
+                            onChange = {(e) => {
+                                const searchTxt = _.get(e, 'target.value');
+                                this.setState({
+                                    searchUser: searchTxt,
+                                }, () => {
+                                    store.startSearchUsers(searchTxt);
+                                })
+                            }}
+                            />
+                        </form>
+                        {resultSearch()}
+                        </div> : null }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
                     <div className="header-mid">
                         { this.renderChannelTitle(activeChannel) }
                     </div>
                     <div className="header-right">
+<<<<<<< HEAD
                             <UserBar store = { store } />
                         {/* <div className="toolsRight-bar" > */}
                             <IconButton onClick={this.handleChangeTheme} style={{ color: "rgba(199, 119, 199, 0.9)"}}>
@@ -581,6 +768,23 @@ export default class App3 extends Component {
 
                     {/* side bar left with channel */}
                     <div className={className('sidebar-left', {'darkTheme': !isDark}, {'openbarLeft': isBarLeft})}  ref = {(ref) => this.refSiderBar = ref}>
+=======
+                        <UserBar store = { store } />
+                        <div className="toolsRight-bar" >
+                            <IconButton onClick={this.handleChangeTheme} style={{ color: "rgba(199, 119, 199, 0.9)"}}>
+                                { !isDark ? <FaSun /> : <FaMoon />}
+                            </IconButton>
+                        </div>
+                        <div className="toolsRight-bar" >
+                            <IconButton  style={{ color: "rgba(199, 119, 199, 0.7)"}}>
+                               <a href="/about/help"><AiOutlineQuestionCircle /></a>
+                            </IconButton>
+                        </div>
+                    </div>
+                </div>
+                <div className='chat-main'>
+                    <div className={className('sidebar-left', {'darkTheme': !isDark})}>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         <div className="chanels">
                             {channels.map((channel, index) => {
                                 return (
@@ -604,8 +808,11 @@ export default class App3 extends Component {
                             
                         </div>
                     </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     {
                         iShowConfig ?  <Draggable style={{
                             zIndex: 101,
@@ -632,7 +839,10 @@ export default class App3 extends Component {
                                         onChange = {({target})=>{
                                             this.setState({ idRoomChat: target.value })
                                         }}
+<<<<<<< HEAD
                                         autoFocus
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                         id="room" ></input>
                                     </li>
                                     <li>
@@ -678,6 +888,7 @@ export default class App3 extends Component {
                         </Draggable>
                         : null
                     }
+<<<<<<< HEAD
 
 
                     {/* chat content main */}
@@ -697,6 +908,11 @@ export default class App3 extends Component {
                                 </IconButton>
                                 </Tooltip>
                             </div>
+=======
+                   
+                    <div className={className("chat-content", {'darkTheme': !isDark})}>
+                    {   me ? <div className={className("toolChat", {'darkTheme': !isDark})}>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             <div>
                                 {!openToolChat ?  <IconButton style={{ color: "rgba(199, 119, 199, 0.9)"}} onClick = {()=>this.setState({openToolChat: !openToolChat})}><CgMoreVerticalAlt /></IconButton> : <div className="toolChats">
                                     <IconButton style={{ color: "rgba(199, 119, 199, 0.9)"}} onClick = {()=>this.setState({iShowConfig: !iShowConfig})}>
@@ -725,6 +941,7 @@ export default class App3 extends Component {
                         : 
                         <div className={className("app-say", {'darkTheme': !isDark})}>
                             <h3>LOGIN to ACTIVE PAGE</h3>
+<<<<<<< HEAD
                             <div className="animation-wait">
                                 <Loading></Loading>
                             </div>
@@ -733,10 +950,18 @@ export default class App3 extends Component {
                         
                         <div  className="messages">
                             <ul className="wrap-message" ref={(ref) => this.messagesRef = ref}>
+=======
+                            <Loading></Loading>
+                        </div>
+                    }
+                        
+                        <div ref={(ref) => this.messagesRef = ref} className="messages">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             { 
                                 messages.map((mess, index) => { 
                                     const user = _.get(mess, 'user');
                                     return (
+<<<<<<< HEAD
                                    
                                         <li key={index} className={`${mess.me ? 'message-me' : 'message'}`}>
 
@@ -771,11 +996,52 @@ export default class App3 extends Component {
                                         </li>
                                     
                                     
+=======
+                                    <div key={index} className={`${mess.me ? 'message-me' : 'message'}`}>
+
+                                    <img src={`http://localhost:8080/${_.get(user, 'avatar')}` || defaultUserImg} alt="user-img" className="img-user"></img>
+
+                                    <div className="message-body">
+
+                                        <div className="username">{`${mess.me ? 'You' : _.get(mess, 'user.name')}`} say: </div>
+                                        
+                                        <p className="message-text">
+                                    
+                                                { (mess.type === `text`) ? <p>{mess.body}</p>
+                                                // this will be either video or image 
+                                                :
+                                                
+                                                ((`${mess.body}`).substring((`${mess.body}`).length - 3, (`${mess.body}`).length) === 'mp3' ? 
+                                        
+                                                    <div className="audio-message" > <MdPlayCircleOutline style={{fontSize: '1.5rem', alignItems:'center'}} onClick= {() => this.handlePlayMusic(`http://localhost:8080/${mess.body}`)} /> Click to Play</div>
+                                                    :
+                                                    ((`${mess.body}`).substring((`${mess.body}`).length - 3, (`${mess.body}`).length) === 'mp4' ?
+                                                        <video style={{ maxWidth: '20rem' }} src={`http://localhost:8080/${mess.body}`} alt="video" controls />
+                                                        :
+                                                        <img style={{ maxWidth: '20rem' }} src={`http://localhost:8080/${mess.body}`} alt="img" />
+                                                    )
+                                                    )
+                                             } 
+                                            {/* { this.renderMessage(mess) } */}
+                                            <p className="timing"><Moment fromNow>{mess.created}</Moment></p>
+
+                                        </p>
+                                    </div>
+                                    </div>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                     );
                                    
                                 })
                             }
+<<<<<<< HEAD
                             </ul>
+=======
+                                {showEmoji ? <div className="emoji" ref = {(ref) => this.ref = ref}>
+                                    <Picker  onEmojiClick={onEmojiClick} skinTone={SKIN_TONE_MEDIUM_DARK}/>
+                                </div> : null }
+                              
+                                 
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         </div>
                         {
                         isShowGetAud ? <div className="getAdi">
@@ -784,15 +1050,21 @@ export default class App3 extends Component {
                                 </div>
                         </div> : null
                         }
+<<<<<<< HEAD
 
                         {_.get(activeChannel, 'typing') && _.get(activeChannel, 'typier') !== _.get(me, '_id') ? <div  disabled = { newMessage.length > 1 } className="typing-status">Is Typing..</div> : null}
                         
 
+=======
+                        
+                        {_.get(activeChannel, 'typing') && _.get(activeChannel, 'typier') !== _.get(me, '_id') ? <div  disabled = { newMessage.length > 1 } className="typing-status">Is Typing..</div> : null}
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         {   members.size > 0 ? <div className="message-input">
                             <form 
                                 onSubmit= { this.handleSubmit }
                                 disabled = { newMessage.length < 1 }
                                 className="message-form">
+<<<<<<< HEAD
 
                                 {showEmoji ? <div className="emoji" ref = {(ref) => this.ref = ref}>
                                     <Picker  onEmojiClick={onEmojiClick} skinTone={SKIN_TONE_MEDIUM_DARK}/>
@@ -802,6 +1074,11 @@ export default class App3 extends Component {
                                     <MdInsertEmoticon />
                                 </IconButton>
 
+=======
+                                <IconButton style={{ color: "rgba(199, 119, 199, 0.9)"}} onClick = {() => {this.setState({showEmoji: !showEmoji})}}>
+                                    <MdInsertEmoticon />
+                                </IconButton>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                 <textarea  
                                     id = "message"
                                     ref={(input)=> this.input = input}
@@ -809,17 +1086,24 @@ export default class App3 extends Component {
                                     className = "form-control"
                                     value = { newMessage }
                                     autoComplete = {'off'}
+<<<<<<< HEAD
                                     placeholder = "Type words"
+=======
+                                    placeholder = "Type something interesting"
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                     onKeyUp = { (e) => { 
                                         { if(e.keyCode === 13 && !e.shiftKey) 
                                             { this.handleSubmit(e); }}
                                         { if( e.keyCode !== 13 ){ this.sendTyping() }}
                                         }
                                     }
+<<<<<<< HEAD
                                     onKeyDown={(e) => {
                                         console.log("keycode", e.keyCode);
                                         console.log("value e", e);
                                     }}
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                     onChange = {
                                     	({target})=>{
                                     		this.setState({newMessage:target.value})
@@ -828,10 +1112,17 @@ export default class App3 extends Component {
                                     />
 
                                 
+<<<<<<< HEAD
                                     {/*onClick = {() => this.toggleMicrophone()} */}
                                     <IconButton style={{ color: "rgba(199, 119, 199, 0.9)"}} >
                                         <MdMic onMouseDown= {() => {this.startRecording()}} onMouseUp= {() => {this.stopRecording()}} />
                                     </IconButton>
+=======
+                                            {/*onClick = {() => this.toggleMicrophone()} */}
+                                        <IconButton style={{ color: "rgba(199, 119, 199, 0.9)"}} >
+                                        <MdMic onMouseDown= {() => {this.startRecording()}} onMouseUp= {() => {this.stopRecording()}} />
+                                        </IconButton>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             
                                 <button
                                     disabled = { newMessage.length < 1 }
@@ -846,11 +1137,17 @@ export default class App3 extends Component {
                         }
                     </div>
                    
+<<<<<<< HEAD
 
                    {/* sidebar right with member list */}
                     <div className={className("sidebar-right", {'darkTheme': !isDark}, {'openbarRight': isBarRight} )} ref = {(ref) => this.refSiderBarRight = ref}>
                         <div className="title-right">Members</div>
                         <div className="chanels" ref = {(ref) => this.refSiderBarRight = ref}>
+=======
+                    <div className={className("sidebar-right", {'darkTheme': !isDark})}>
+                        <div className="title-right">Members</div>
+                        <div className="chanels">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             { members.map((member, index) => {
 
                                 const isOnline = _.get(member, 'online', false);
@@ -858,7 +1155,11 @@ export default class App3 extends Component {
                                     <div key ={ index } className="chanel">
 
                                         <div className="user-img-channel">
+<<<<<<< HEAD
                                             <img src={`${urlServer}/${_.get(member, 'avatar')}` || defaultUserImg} alt="user-img" />
+=======
+                                            <img src={`http://localhost:8080/${_.get(member, 'avatar')}` || defaultUserImg} alt="user-img" />
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                             <span className={className('user-status', {'online': isOnline})}></span>
                                         </div>
                                         <div className="chanel-info">
@@ -885,6 +1186,7 @@ export default class App3 extends Component {
 
                 </div>
                 
+<<<<<<< HEAD
                 <div className={className("chat-footer", {'darkTheme': !isDark})}>
                     {/* <div className="footer-left">
                         <div className="action">
@@ -894,6 +1196,17 @@ export default class App3 extends Component {
                 
                     <div className="footer-mid">
                        <h4><a href="https://ndscoop.github.io/ndsappbeta/">AllRight nDs, 2022</a></h4>
+=======
+               <div className={className("chat-footer", {'darkTheme': !isDark})}>
+                    <div className="footer-left">
+                        <div className="action">
+                            {/* <Link to='' onClick={(e) => this._onCreateChannel(e)} className="btn-primary">AddNew</Link> */}
+                        </div>
+                    </div>
+                
+                    <div className="footer-mid">
+                       <h4><a href="https://ndsapp.herokuapp.com/">AllRight nDs, 2020</a></h4>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     </div>
                     <div className="footer-right">
                     {!me && !isConnected ? <div className="app-warning-state">Reconnecting..</div> : <div className="app-success-state">Connected</div>}

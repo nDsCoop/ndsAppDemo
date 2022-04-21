@@ -11,7 +11,11 @@ export default axios.create({
   baseURL: "https://www.googleapis.com/youtube/v3",
   params: {
     part: "snippet",
+<<<<<<< HEAD
     videoCategoryId: "10",
+=======
+    videoCategoryId: "20",
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     type: "video",
     key: selectRandomKey()
   }

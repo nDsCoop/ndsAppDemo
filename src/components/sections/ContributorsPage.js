@@ -47,7 +47,11 @@ const ContributorsPage = () => {
       alignItems="center">
         <div className="form-section-music">
           <Typography variant="h5" gutterBottom={true}>
+<<<<<<< HEAD
             The current page has been changed to the Contributors in About page, sorry for this disconvenience
+=======
+            The current page has been changed to the ContributorsApp page, click <a href="/about/contributes">here</a> to continue{" "}
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
           </Typography>
         </div>
          

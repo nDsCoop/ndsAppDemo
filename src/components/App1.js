@@ -1,18 +1,28 @@
 import React, { Component} from 'react'
 
 import classNames from 'classnames';
+<<<<<<< HEAD
 import loadingImg from '../images/loadingImg.gif'
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 // import styled from 'styled-components';
 // import Banner from './Banner';
 
 import StyledHero from './StyleHero';
+<<<<<<< HEAD
 import { FaMap, FaRegMap } from 'react-icons/fa';
+=======
+import { FaAlignLeft, FaMap, FaRegMap } from 'react-icons/fa';
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 import { Tooltip, IconButton, Card, CardContent } from '@material-ui/core';
 import { RiSubtractLine, RiMap2Fill, RiPlaneLine } from 'react-icons/ri';
 import { BsPlus } from 'react-icons/bs';
 import { SiOpenstreetmap } from 'react-icons/si'
 import { IoIosPlanet } from 'react-icons/io';
+<<<<<<< HEAD
 import { VscGrabber, VscChromeClose } from 'react-icons/vsc';
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 import { BiSort, BiCurrentLocation, BiDotsHorizontalRounded, BiRadioCircleMarked } from 'react-icons/bi';
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
 import InfoBox from './app1Content/InfoBox';
@@ -22,7 +32,11 @@ import MapCv from './app1Content/Map';
 import MainMap from './app1Content/MainMap';
 import 'leaflet/dist/leaflet.css';
 import { MdAirplanemodeInactive, MdLocalHospital } from 'react-icons/md';
+<<<<<<< HEAD
 import { Redirect, Link } from 'react-router-dom';
+=======
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 import _ from 'lodash';
 import Charts from './app1Content/charts';
 // import GetPositionMap from '../external/GetPosition';
@@ -49,6 +63,7 @@ const CountriesAPI = "https://disease.sh/v3/covid-19/countries";
 // const apiKeyGetGeo = 'AIzaSyD57PRHJQSQ5XQOuNtAWpRBOP-UCX5pSzA'
 
 //Weatherapi
+<<<<<<< HEAD
 // const url1 = 'https://api.weatherapi.com/v1/forecast.json?key=510cbd14438a4e33bcc15040202911&q=10.068,102.316&days=2'
 
 //get astronomy today
@@ -57,11 +72,30 @@ const CountriesAPI = "https://disease.sh/v3/covid-19/countries";
 //MetaWeather
 //get neer name city with latlong enter
 // const url6 = 'https://www.metaweather.com/api/location/search/?lattlong=10.068,102.316'
+=======
+
+// const url1 = 'https://api.weatherapi.com/v1/forecast.json?key=510cbd14438a4e33bcc15040202911&q=10.068,102.316&days=2'
+
+//get astronomy today
+
+// const url3 = 'http://api.weatherapi.com/v1/astronomy.json?key=510cbd14438a4e33bcc15040202911&q=48.8567,2.3508'
+
+
+//MetaWeather
+//get neer name city with latlong enter
+// const url6 = 'https://www.metaweather.com/api/location/search/?lattlong=10.068,102.316'
+
+
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 //Meteorologisk Institutt
  
 
 //const url7 = 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=10.068&lon=102.316'
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 //get global map img
 
 //https://globe.adsbexchange.com/
@@ -70,9 +104,21 @@ const CountriesAPI = "https://disease.sh/v3/covid-19/countries";
 //https://nds.tphcm:Hippo956592@opensky-network.https://api.met.no/weatherapi/geosatellite/1.4?area=global&size=normal&time=2020-11-29T03:30:00Z&type=infraredorg/api/states/all?icao24=88816c&icao24=3e1bf9
 //https://nds.tphcm:Hippo956592@opensky-network.org/api/states/all
 //https://nds.tphcm:Hippo956592@opensky-network.org/api/tracks/all?icao24=3c4b26&time=0
+<<<<<<< HEAD
 //https://api.openaq.org/v1/locations?country[]=NL
 
 export default class App1 extends Component {
+=======
+//
+//
+//https://api.openaq.org/v1/locations?country[]=NL
+
+
+
+
+
+export default class App4 extends Component {
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     
   constructor(props){
   super(props);
@@ -80,7 +126,10 @@ export default class App1 extends Component {
     height: window.innerHeight,
     readMore: false,
     img: null,
+<<<<<<< HEAD
     loadingRequire: false,
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     isOpen:false,
     listening: false,
     isChat: true,
@@ -144,9 +193,13 @@ export default class App1 extends Component {
     typeOfMap: 0,
     mapMarkfindPlane: null,
     mapMarkfindPlaneRealtime: null,
+<<<<<<< HEAD
     markPosRealtime: 'Chose Mark',
     isLoginPage: false,
     urlReDirect: ''
+=======
+    markPosRealtime: 'Chose Mark'
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
   }
 
 }
@@ -193,7 +246,17 @@ toggleChangeIsPlanes = (e) => {
     
 }
 
+<<<<<<< HEAD
 
+=======
+toggleAccountUser = (me) => {
+    if(!me){
+        window.location.replace("/page2/greeting/newuser&account");
+    }else{
+        window.location.replace("/page3");
+    }
+}
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
 
 infoPlanesOfMark = (amountPlanes, lastContact) => {
@@ -345,7 +408,10 @@ toggleSubmit = (e) => {
         public: isShowMark,
         message: txtMessage
     }
+<<<<<<< HEAD
     this.setState({loadingRequire: true})
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
     if(me){
         if(mapPosition.lat && mapPosition.lng && txtNameMark){
@@ -358,7 +424,10 @@ toggleSubmit = (e) => {
                         type: 'success'
                     },
                     txtMessage: null,
+<<<<<<< HEAD
                     loadingRequire: false
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     
                 })
             }).catch((err) => {
@@ -368,7 +437,10 @@ toggleSubmit = (e) => {
                         body: err,
                         type: 'error'
                     },
+<<<<<<< HEAD
                     loadingRequire: false
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                 })
                 });
         }else{
@@ -377,7 +449,10 @@ toggleSubmit = (e) => {
                     body: 'Latitude Longitude, Name mark is require',
                     type: 'error'
                 },
+<<<<<<< HEAD
                 loadingRequire: false
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             })
         }
     } else {
@@ -386,7 +461,10 @@ toggleSubmit = (e) => {
                 body: 'Need login an Account to add New Mark',
                 type: 'error'
             },
+<<<<<<< HEAD
             loadingRequire: false
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         })
     }
     
@@ -648,6 +726,11 @@ onChangeMarkSelect = (event) => {
                 // mapCenter: { lat: mark.lat, lng: mark.lng },
                 mapZoomMain: 12
             })
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
         }
         })
     }
@@ -785,6 +868,7 @@ render(){
      )
     )
     );
+<<<<<<< HEAD
 
     //need fix use Redirect
 
@@ -812,6 +896,9 @@ render(){
 
     if(this.state.isLoginPage)
     return (<Redirect to={`${this.state.urlReDirect}`}/>)
+=======
+        
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
     return (
       <div className="app1">
@@ -823,11 +910,17 @@ render(){
                 className="nav-btn"
                 onClick={this.handleToggle}
             >
+<<<<<<< HEAD
                 {
                     this.state.isOpen ? <VscChromeClose className="nav-icon" /> : <VscGrabber className="nav-icon" />
                 }
             </button>
             <div onClick={() => toggleAccountUser()} className="toggle-lang">
+=======
+                <FaAlignLeft className="nav-icon" />
+            </button>
+            <div onClick={() => this.toggleAccountUser(me)} className="toggle-lang">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                {nameUser}
                 {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="25" aria-hidden="true" focusable="false" fill="currentColor">
                 <path d="M217.982 201.586h-64.499c-5.537 0-10.026 4.489-10.026 10.026s4.489 10.026 10.026 10.026h53.547c-4.72 25.263-26.935 44.446-53.547 44.446-30.037 0-54.473-24.436-54.473-54.473s24.436-54.473 54.473-54.473c14.55 0 28.229 5.667 38.518 15.955 3.916 3.916 10.264 3.916 14.178 0 3.916-3.916 3.916-10.264 0-14.178-14.077-14.077-32.791-21.829-52.697-21.829-41.094 0-74.525 33.431-74.525 74.525 0 41.094 33.431 74.525 74.525 74.525s74.525-33.431 74.525-74.525c.001-5.536-4.488-10.025-10.025-10.025z"></path>
@@ -837,6 +930,7 @@ render(){
         </div>
         
         <div className={this.state.isOpen ? "nav-items show-nav-items" : "nav-items"} >
+<<<<<<< HEAD
             
             <a onClick={() => this.toggleActiveWindow(1)} >
                 <div  className={classNames('nav-item', {'active': this.state.isChat })}>
@@ -864,6 +958,32 @@ render(){
         </div>
         </div>
         <div className="main-retrille">
+=======
+            <a href="">
+                <div onClick={() => this.toggleActiveWindow(1)} className={classNames('nav-item', {'active': this.state.isChat })}>
+                    Weather Mark
+                </div>
+            </a>
+        <a href="">
+            <div onClick={() => this.toggleActiveWindow(2)} className={classNames('nav-item', {'active': this.state.isWrite})}>
+                Corona Mark
+            </div>
+        </a>
+        <a href="">
+            <div onClick={() => this.toggleActiveWindow(3)}  className={classNames('nav-item', {'active': this.state.isShowFormAddMessage })}>
+                Plane Mark
+            </div>
+        </a>
+        <a href="">
+            <div onClick={() => this.toggleActiveWindow(4)}  className={classNames('nav-item', {'active': this.state.isShowInstruction })}>
+                Instruction
+            </div>
+        </a>
+                    
+        </div>
+          </div>
+          <div className="main-retrille">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
             <div className="left-armap">
                 {/* <div className="img-user-retrille" >
                     
@@ -929,12 +1049,15 @@ render(){
                                
                                 {
                                     this.state.isFormAddNewMark ? <form className="form-addmark">
+<<<<<<< HEAD
                                         {   this.state.loadingRequire ? <div className="loadingGif-User">
                                                 <img className="img-loading-require" src = {loadingImg} alt="" />
                                             </div>
                                             :
                                             null
                                         }
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                         <ul>
                                             <li>
                                             { this.state.message ? <p className={classNames('app-msg', _.get(this.state.message, 'type'))}>
@@ -950,7 +1073,10 @@ render(){
                                                 onChange = {({target})=>
                                                     this.setState({txtNameMark: target.value})
                                                 } 
+<<<<<<< HEAD
                                                 autoFocus
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                                 id="txtMessage" ></input>
                                             </li>
                                             <li>
@@ -1047,7 +1173,11 @@ render(){
                                         <div className="img-user-retrille" >
                            
                                             <div className="user-img-channel">
+<<<<<<< HEAD
                                                 <img  className="img-profile" src={mark.imgMark ? `https://ndschatserver.herokuapp.com/${mark.imgMark}` : defaultImg}  alt="user-img"></img>
+=======
+                                                <img  className="img-profile" src={mark.imgMark ? `http://localhost:8080/${mark.imgMark}` : defaultImg}  alt="user-img"></img>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                             </div>
                                             
                                             <span>| {(mark.lat.toFixed(5))}-{(mark.lng.toFixed(5))} </span>
@@ -1106,6 +1236,7 @@ render(){
                                     <button 
                                     // disabled={this.state.isFormAddNewMark ? true : false} 
                                     onClick = {this.toggleAddMark}
+<<<<<<< HEAD
                                         type="button" className="login-btn">{this.state.isFormAddNewMark ? 'Cancel': 'Add newMark'}
                                     </button>
                                     {/* <div className="action-mini">
@@ -1118,6 +1249,9 @@ render(){
                                 </div>
                                 <div className="invi-marks-warning">
                                     Add mark is not supported on this device
+=======
+                                        type="button" className="login-btn">{this.state.isFormAddNewMark ? 'Cancel': 'Add newMark'}</button>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                                 </div>
                                 {/* <li>
                                     <select name="" onChange={(e) => this.onChangeCountrySelect(e)} value={this.state.country}>
@@ -1174,11 +1308,17 @@ render(){
             
                 </div>
                 {  
+<<<<<<< HEAD
                     readMore ? <div className="main-info-marks">
                     <div className="title-proccess-marks">Visualise Data Marks</div>
 
 
                     <div className="proccess-marks-value">
+=======
+                    readMore ? <><div className="title-proccess-marks">Visualise Data Marks</div>
+                    <div className="proccess-marks-value">
+                    
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     <table>
                     <caption>Title of table marks</caption>
                         <thead>
@@ -1232,21 +1372,35 @@ render(){
                         </table>
                         </div>
                        
+<<<<<<< HEAD
 
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         <div className="chart-marks">
                         {markList.map(mark => (
                             <Charts mark = {mark} />
                         ))}
+<<<<<<< HEAD
                         </div>
 
 
+=======
+                                
+                            
+                            
+                        </div>
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                         <div className="title-forecast-nexttime">Forecast the nextTime</div>
                         <div className="forecastmark">
     
                             <ChartForecast nameMark = {this.state.markPos} mark = {this.state.markForecast} />
                             
                         </div>
+<<<<<<< HEAD
                         </div> : null
+=======
+                        </> : null
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
     
                 }
                
@@ -1302,8 +1456,12 @@ render(){
                                 <MapCv marks= {markList} casesType= {this.state.casesType} countries= {this.state.mapCountries} zoom={this.state.mapZoom} center={this.state.mapCenter} />
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div className="map-content-right">
                         <Card>
+=======
+                        <Card className="map-content-right">
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                             <CardContent>
                                 <div className='map-header-right'>
                                     <span>Live Cases by Country</span>
@@ -1320,7 +1478,10 @@ render(){
                             </CardContent>
                             {/* <CardContent>Some thing here</CardContent> */}
                         </Card>
+<<<<<<< HEAD
                         </div>
+=======
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
                     </div>
 
                 </div>
@@ -1329,6 +1490,7 @@ render(){
             null
             }
             {
+<<<<<<< HEAD
             this.state.isShowFormAddMessage ? 
             <div className="right-weather">
                 <div className="main-plane-map">
@@ -1559,6 +1721,238 @@ render(){
             </div>
             : null
         }
+=======
+                        this.state.isShowFormAddMessage ? 
+                        <div className="right-weather">
+                            <div className="main-plane-map">
+                                <div className='map-plane'>
+                                    {(this.state.isAllPlanes === 2 || this.state.isRealtimePlane === 1)?  <div className="map-cv-header">
+                                        <div className="invi-marks">
+                                            <div className="name-planes-ofmark">
+                                                Name Mark:    {this.state.markPos}
+                                            </div>
+                                            <div className="total-planes-ofmark">
+                                                Active (R=100km):   {this.state.amountPlanesOfMark || 0} aircraft
+                                            </div>
+                                            <div className="timelast-planes-ofmark">
+                                                Last Contact:   <Moment fromNow>{this.state.lastContactOfMark}</Moment>
+                                            </div>
+                                        </div>
+
+                                        {
+                                            this.state.isRealtimePlane === 0 ?  <>
+                                            <span style={{color: 'rgba(0, 0, 0, 0.6)'}}>Static Time</span>
+                                            <li>
+                                                <select name=""  onChange={(e) => this.onChangeMarkSelect(e)} value={this.state.markPos} >
+                                                    <option value='mymark'>MyMark</option>
+                                                    {markList.map(mark => (
+                                                        <option value={mark.nameMark}>{mark.nameMark || 'noValue'}</option>
+                                                    ))}
+                                                )
+                                                </select>
+                                            </li>
+                                            </> : <>
+                                            <span style={{color: 'rgb(36, 139, 10)'}}>Real Time</span>
+                                            <li>
+                                                <select name=""  onChange={(e) => this.onChangeMarkSelectRealtime(e)} value={this.state.markPosRealtime} >
+                                                    {markList.map(mark => (
+                                                        <option value={mark.nameMark}>{mark.nameMark || 'noValue'}</option>
+                                                    ))}
+                                                )
+                                                </select>
+                                            </li>
+                                            </>
+                                        }
+                                        
+                                    
+                                    </div> : null}
+                                   
+                                    <div className="map-area">
+                                        
+                                        <MapPlane infoPlanes = {(e, i, l) => this.infoPlanes(e, i, l)} 
+                                            marks= {markList.toArray()} isRealtimePlane = {this.state.isRealtimePlane} 
+                                            isAllPlanes= {this.state.isAllPlanes} 
+                                            mapMarkfindPlaneRealtime = {this.state.mapMarkfindPlaneRealtime}
+                                            zoom={this.state.mapZoom} center={this.state.mapCenter} 
+                                            typeOfMap={this.state.typeOfMap} mapMarkfindPlane={this.state.mapMarkfindPlane}
+                                            infoPlanesOfMark = {(e, l) => this.infoPlanesOfMark(e, l)}
+                                             />
+                                       
+                                    </div>
+                                </div>
+                                <div className="right-navbar">
+                                    <ul className="right-navbar-write">
+                                        <li>
+                                            <span><Tooltip  title="Show Tab Left" placement="left-start">
+                                                <IconButton onClick={() => this.setState({showSettingVoice: !showSettingVoice, isRealtimePlane: false})} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                    <BiDotsHorizontalRounded />
+                                                </IconButton></Tooltip>
+                                            </span>
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <span><Tooltip title="AirCraft in Range" placement="left-start">
+
+                                                {this.state.isRealtimePlane === 1 ? <IconButton onClick={this.toggleChangeIsPlanes} style={{fontSize: '1rem', color: 'rgb(36, 139, 10)'}}>
+                                                    <BiRadioCircleMarked />
+                                                </IconButton> : <IconButton onClick={this.toggleChangeIsPlanes} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                    <BiRadioCircleMarked />
+                                                </IconButton>  }
+
+                                                </Tooltip>
+
+                                            </span>
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <span><Tooltip title="All AirCraft" placement="left-start">
+                                                <IconButton onClick={() => this.setState({ isRealtimePlane: 0, isAllPlanes: 0})} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                    <IoIosPlanet />
+                                                </IconButton></Tooltip>
+                                            </span>
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <span><Tooltip title="Aircraft in Marks" placement="left-start">
+                                                <IconButton onClick={() => this.setState({isRealtimePlane: 0, isAllPlanes: 1})} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                    <BiCurrentLocation />
+                                                </IconButton></Tooltip>
+                                            </span>
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <span><Tooltip title="Hide AirCraft" placement="left-start">
+                                                <IconButton onClick={() => this.setState({isRealtimePlane: 0, isAllPlanes: false})} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                    <MdAirplanemodeInactive />
+                                                </IconButton></Tooltip>
+                                            </span>
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <span><Tooltip title="StreetMap" placement="left-start">
+                                                <IconButton onClick={() => this.setState({typeOfMap: 0})} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                    <SiOpenstreetmap />
+                                                </IconButton></Tooltip>
+                                            </span>
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <span><Tooltip title="GeographyMap" placement="left-start">
+                                                <IconButton onClick={() => this.setState({typeOfMap: 1})} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                    <RiMap2Fill />
+                                                </IconButton></Tooltip>
+                                            </span>
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <span><Tooltip title="LightMap" placement="left-start">
+                                                <IconButton onClick={() => this.setState({typeOfMap: 2})} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                    <FaRegMap />
+                                                </IconButton></Tooltip>
+                                            </span>
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <span><Tooltip title="DarkMap" placement="left-start">
+                                                <IconButton onClick={() => this.setState({typeOfMap: 3})} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                    <FaMap />
+                                                </IconButton></Tooltip>
+                                            </span>
+                                            <p></p>
+                                        </li>
+                                       
+                                                                                  
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        : null
+                    }
+                    {showSettingVoice ? <Draggable style={{
+                                        zIndex: 1111,
+                                        position: 'absolute',
+                                        cursor: 'move',
+                                        maxHeight: '40rem',
+                                        left: '3.5rem',
+                                        marginRight: '1rem', 
+                                        transform: 'translate(-50%, 0)',
+                                    }}>
+                                <div className="tab-plane-left">
+                                    <div className='main-tab-plane-left'>
+                                        <h4>Data Marks-Flight</h4>
+                                        <div className="header-tab-plane-left">
+                                            <div className="total">Total: {this.state.amountPlanes} </div>
+                                            <div className="lats-connect"> Last Contact: <Moment fromNow>{this.state.lastContact}</Moment></div>
+                                        </div>  
+                                        {/* <div className="deliver-popup"></div> */}
+
+                                        {this.state.listPlanes.map((listPlanes, key) => {
+                                            return (
+                                                
+                                                <div className="list-planes-ofmarks">
+                                                
+                                                    <div className='list-planes-title'>
+                                                    {listPlanes.nameMark || 'noValue'}
+                                                    <span>{(listPlanes.data).length} planes</span>
+                                                    <span>
+                                                        <IconButton onClick={() => this.setState({showDetailPlanes: !showDetailPlanes, showDetailPlanesKey: key })} style={{fontSize: '1rem', color: 'hsl(186, 100%, 94%)'}}>
+                                                            <AiOutlineQuestionCircle />
+                                                        </IconButton>
+                                                    </span>
+                                                    </div>
+                                                    {showDetailPlanes && (showDetailPlanesKey === key) ? <div className="list-item-plane-mark">
+                                                        {listPlanes.data.map((plane, key) => (
+                                                            <div className="item-plane-mark">
+                                                            {/* <div className="deliver-popup"></div> */}
+                                                                <div className="icao">iCAO24:  {plane.icao24}</div>
+                                                                <div className="signCall">CallSign:   {plane.callSign}</div>
+                                                                <div className="originCountry">Country-Original:   {plane.origin_country}</div>
+                                                                <div className="source">Source-Signal:   {plane.position_source===0 ? 'ADS-B' : ( plane.position_source===1 ? 'ASTERIX' : 'MLAT' )}</div>
+                                                            <div className="deliver-popup"></div>
+                                                                <div className="locationPlane">
+                                                                    Location Current:   {plane.location.lat},  {plane.location.lng}
+                                                                </div>
+                                                                <div className="connectionLast">Last Contact: <Moment fromNow>{plane.last_contact}</Moment></div>
+                                                                <div className="baroPlane">
+                                                                    Baro Current:   {plane.baro_altitude}m - {(plane.baro_altitude * 3.28).toFixed(2)}ft
+                                                                </div>
+                                                                <div className="">
+                                                                    Current Speed:   {plane.velocity}m/s - {(plane.velocity * 3.6).toFixed(2)}km/h
+                                                                </div>
+                                                                <div className="currentPlane">Current Dir:   {plane.true_track} (degree)</div>
+                                                            {/* <div className="deliver-popup"></div> */}
+
+                                                            </div>
+                                                        ))}
+                                                   
+                                                        </div> : null }
+                                                
+                                                </div>
+                                            
+                                            )
+                                        // console.log(listPlanes)
+                                         }
+
+                                        )
+                                                                                        
+                                    }
+                                    </div>
+                                </div>
+                            </Draggable>
+                            :
+                            null
+                            }
+                            {
+                        this.state.isShowInstruction ? 
+                        <div className="main-instruction-weather">
+                            <div className="instruction-weather">
+                                <div className="header-instruction">The current page has been changed to the HelpsApp page</div>
+                                <button type="button" className="btn-primary"><a href="/about/help">See More</a></button>
+                            </div>
+                        </div>
+                        : null
+                    }
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
 
         </div>
 
@@ -1567,4 +1961,9 @@ render(){
        
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> baf3ed63bb22c8d11807d4c127297193e22183a8
