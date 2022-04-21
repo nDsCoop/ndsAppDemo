@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/ndsweb/static/css/main.e2f4942f.chunk.css",
-    "main.js": "/ndsweb/static/js/main.4d24d364.chunk.js",
-    "main.js.map": "/ndsweb/static/js/main.4d24d364.chunk.js.map",
-    "runtime-main.js": "/ndsweb/static/js/runtime-main.dd76df36.js",
-    "runtime-main.js.map": "/ndsweb/static/js/runtime-main.dd76df36.js.map",
+    "main.css": "/ndsweb/static/css/main.86d89578.chunk.css",
+    "main.js": "/ndsweb/static/js/main.8f5bf66c.chunk.js",
+    "main.js.map": "/ndsweb/static/js/main.8f5bf66c.chunk.js.map",
+    "runtime-main.js": "/ndsweb/static/js/runtime-main.dccf97c9.js",
+    "runtime-main.js.map": "/ndsweb/static/js/runtime-main.dccf97c9.js.map",
     "static/css/2.7d011da2.chunk.css": "/ndsweb/static/css/2.7d011da2.chunk.css",
     "static/js/2.32de9f9a.chunk.js": "/ndsweb/static/js/2.32de9f9a.chunk.js",
     "static/js/2.32de9f9a.chunk.js.map": "/ndsweb/static/js/2.32de9f9a.chunk.js.map",
@@ -12,8 +12,8 @@
     "static/js/3.6a446a34.chunk.js.map": "/ndsweb/static/js/3.6a446a34.chunk.js.map",
     "static/js/4.16280546.chunk.js": "/ndsweb/static/js/4.16280546.chunk.js",
     "static/js/4.16280546.chunk.js.map": "/ndsweb/static/js/4.16280546.chunk.js.map",
-    "static/js/5.d113807b.chunk.js": "/ndsweb/static/js/5.d113807b.chunk.js",
-    "static/js/5.d113807b.chunk.js.map": "/ndsweb/static/js/5.d113807b.chunk.js.map",
+    "static/js/5.8aa9ba8f.chunk.js": "/ndsweb/static/js/5.8aa9ba8f.chunk.js",
+    "static/js/5.8aa9ba8f.chunk.js.map": "/ndsweb/static/js/5.8aa9ba8f.chunk.js.map",
     "static/js/6.8a9cbd66.chunk.js": "/ndsweb/static/js/6.8a9cbd66.chunk.js",
     "static/js/6.8a9cbd66.chunk.js.map": "/ndsweb/static/js/6.8a9cbd66.chunk.js.map",
     "static/js/7.0041e883.chunk.js": "/ndsweb/static/js/7.0041e883.chunk.js",
@@ -25,10 +25,10 @@
     "static/js/10.6210211e.chunk.js": "/ndsweb/static/js/10.6210211e.chunk.js",
     "static/js/10.6210211e.chunk.js.map": "/ndsweb/static/js/10.6210211e.chunk.js.map",
     "index.html": "/ndsweb/index.html",
-    "precache-manifest.08b4cbb6303cff7d0fe596d9362f002c.js": "/ndsweb/precache-manifest.08b4cbb6303cff7d0fe596d9362f002c.js",
+    "precache-manifest.cb8ae1186d469a20342017f200a9f012.js": "/ndsweb/precache-manifest.cb8ae1186d469a20342017f200a9f012.js",
     "service-worker.js": "/ndsweb/service-worker.js",
     "static/css/2.7d011da2.chunk.css.map": "/ndsweb/static/css/2.7d011da2.chunk.css.map",
-    "static/css/main.e2f4942f.chunk.css.map": "/ndsweb/static/css/main.e2f4942f.chunk.css.map",
+    "static/css/main.86d89578.chunk.css.map": "/ndsweb/static/css/main.86d89578.chunk.css.map",
     "static/js/2.32de9f9a.chunk.js.LICENSE.txt": "/ndsweb/static/js/2.32de9f9a.chunk.js.LICENSE.txt",
     "static/media/CompletedTick.svg": "/ndsweb/static/media/CompletedTick.ffcb10fd.svg",
     "static/media/DownloadIcon.svg": "/ndsweb/static/media/DownloadIcon.e927ae19.svg",
@@ -61,10 +61,10 @@
     "static/media/videobgr6.mp4": "/ndsweb/static/media/videobgr6.fb38e7d1.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.dd76df36.js",
+    "static/js/runtime-main.dccf97c9.js",
     "static/css/2.7d011da2.chunk.css",
     "static/js/2.32de9f9a.chunk.js",
-    "static/css/main.e2f4942f.chunk.css",
-    "static/js/main.4d24d364.chunk.js"
+    "static/css/main.86d89578.chunk.css",
+    "static/js/main.8f5bf66c.chunk.js"
   ]
 }
