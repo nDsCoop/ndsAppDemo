@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "82e5b8b182cf766e8a9edd55ae99fffd",
+    "revision": "fc910102b41d126cd6803d72f099d7ba",
     "url": "/ndsweb/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ndsweb/static/css/2.7d011da2.chunk.css"
   },
   {
-    "revision": "a07e78c269947f87c4d2",
-    "url": "/ndsweb/static/css/main.86d89578.chunk.css"
+    "revision": "dff9b0a07f03439c750f",
+    "url": "/ndsweb/static/css/main.ba56aefc.chunk.css"
   },
   {
     "revision": "5ec27d73dde4779597dc",
@@ -52,8 +52,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ndsweb/static/js/9.5d2b6f37.chunk.js"
   },
   {
-    "revision": "a07e78c269947f87c4d2",
-    "url": "/ndsweb/static/js/main.8f5bf66c.chunk.js"
+    "revision": "dff9b0a07f03439c750f",
+    "url": "/ndsweb/static/js/main.946d22bb.chunk.js"
   },
   {
     "revision": "b7d9f60aeed5aebd6fec",
